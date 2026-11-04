@@ -1,7 +1,7 @@
 # Project progress
 
 ## Current phase
-PHASE 1: MATERIALS BUYING - verifying store links with the user; two A03 camera candidates recorded pending specifications (2026-10-24, Asia/Manila). BOM approval and Phase 2 remain pending.
+PHASE 1: MATERIALS BUYING - sourcing and prototype-readiness checks; Git handoff verified 2026-11-04, Asia/Manila. Two A03 camera candidates remain pending specifications. BOM approval and Phase 2 remain pending.
 
 ## Completed
 1. Read every original project file: AGENTS.md, the blank PROJECT.md template, the three-page hardware BOM PDF, and the two-page product-specification PDF. Extracted text and visually inspected all PDF pages.
@@ -94,7 +94,7 @@ PHASE 1: MATERIALS BUYING - verifying store links with the user; two A03 camera 
 
 49. 2026-11-04: Prepared docs/PROTOTYPE_READINESS.md at user request. Separated first Pi boot/access materials from later camera/sensor/alarm breadboard materials, cooling/support and final-build purchases. Checked official Raspberry Pi setup prerequisites. Existing owned microSD still needs model/capacity confirmation; selected listings are not proof of receipt. No BOM prices/quantities changed, package installation, flashing, wiring or Phase2 transition. Next: confirm actual parts on hand.
 
-50. 2026-11-04: Set up Git continuity using the user's repository https://github.com/hanssantos02/cctv-smoke-detector, preserving its existing starter commit. Added README.md, docs/CONTINUE_ON_ANOTHER_PC.md, Git ignore/attribute rules and AGENTS.md resume guidance. Preserved source PDFs, current BOM/review/readiness documents, current Excel workbook and14 historical authoring/evidence files under archive/bom-authoring. Temporary copies/renders/dependencies and credentials excluded. Existing SSH authentication is available on this PC; another PC must configure its own push access. No BOM amounts, hardware state or phase changed. Remote upload and fresh-checkout verification are the remaining repository setup checks; use Git history for the final checkpoint identity.
+50. 2026-11-04: Set up Git continuity using the user's repository https://github.com/hanssantos02/cctv-smoke-detector, preserving its existing starter commit. Added README.md, docs/CONTINUE_ON_ANOTHER_PC.md, Git ignore/attribute rules and AGENTS.md resume guidance. Preserved source PDFs, current BOM/review/readiness documents, current Excel workbook and14 historical authoring/evidence files under archive/bom-authoring. Temporary copies/renders/dependencies and credentials excluded. Existing SSH authentication is available on this PC; another PC must configure its own push access. No BOM amounts, hardware state or phase changed. Published checkpoint f8024bc to origin/main using existing SSH access. A fresh HTTPS clone from GitHub matched all28 tracked files byte-for-byte, including the current workbook and source PDFs; clone clean, temporary files/dependency symlinks excluded. Repository setup and transfer verification completed. This follow-up log records that result; use Git history for the latest checkpoint identity.
 
 ## Reference budget
 - Table A prototype purchases: PHP 20,864.00.
