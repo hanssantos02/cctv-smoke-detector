@@ -1,6 +1,6 @@
 # PROJECT.md: Project Brief
 
-Updated 2026-10-22 from the supplied product-specification PDF and the user's clarifications. Recommendations and assumptions below are distinct from confirmed requirements.
+Updated 2026-11-05. Original brief came from the supplied product-specification PDF and user clarifications on 2026-10-22. Current status supersedes older dated sourcing/status entries; recommendations and assumptions remain distinct from confirmed requirements.
 
 ## Basics
 - **Project name:** Sentrion SDS200
@@ -57,12 +57,14 @@ Updated 2026-10-22 from the supplied product-specification PDF and the user's cl
 - **B01 enclosure, 2026-10-24:** User has a3D printer and elects to print custom final enclosure. Retail ABS box PHP365 superseded; filament/material, print mass and cost TBD. No zero-cost assumption. Excel final/grand totals flag missing input. Custom design/printing deferred until prototype succeeds; confirm airflow, sensor access, delivered case/board fit and material heat suitability then.
 
 ## What is already owned
+- **Hardware-label check, 2026-11-04:** Pi4 ModelB visible in photo;4GB RAM user-confirmed. Adapter labelled Raspberry Pi KSA-15E-051300HU, INPUT100–240V AC50/60Hz0.5A, OUTPUT5.1V DC3.0A, two flat blades. Matches planned output rating; authenticity/load performance not established by photo. Actual HU plug supersedes earlier HE assumption; no round-to-flat adapter needed if it fits intended socket normally. Silvertec32GB microSDHC marked UHS-I/A1/Class10, reported empty; use for initial setup attempt. Real capacity/reliability/high-endurance construction unverified. Saved BOM/workbook amounts remain a purchase-plan reference pending reconciliation.
 - **Finishing consumables (2026-10-24):** User owns heat-shrink tubing, cable ties AND tie-mount bases; reuse, zero new purchase for those. Sizes/quantities not specified. Wire labels remain unconfirmed/unpriced.
-- **Tools:** User has a3D printer (2026-10-24); printer model, print volume and filament not specified. User owns soldering equipment (2026-10-24); exact iron/station and consumables not specified. Existing Linux computer/router assumed. Other tools remain unconfirmed.
-- **Parts:** User reports already owning an SD card (2026-10-23). Capacity, exact model and endurance rating are not yet confirmed. A02 remains in the current workbook until suitability is checked and the buying quantity is revised.
+- **Tools:** User owns a3D printer and soldering equipment; models/consumables unconfirmed. Windows PC used for preparation; user also owns a Linux laptop, distribution/version pending. Monitor owned without a confirmed Pi-compatible cable; no Ethernet cable reported. Other tools remain unconfirmed.
+- **Parts:** Actual card now identified as Silvertec32GB microSDHC,UHS-I/A1/Class10;OS image written and setup files inspected. High-endurance rating/reliability not established. A02 SanDisk allowance remains an unreconciled purchase-plan reference,not an instruction to buy another card for this diagnostic.
+- **First Pi setup inventory, 2026-11-04:** Pi,supply,microSD and reader reported on hand;labels checked and results above supersede earlier pending-identification entries. This covers first-boot items,not all detector components. Original card was reported empty before OS writing.
 
 ## Status and constraints
-- Current phase: Phase 1 BOM review. No permission to start Phase 2 has been given.
+- Current phase: Phase2,Step19 initial Pi setup/log diagnosis. Approved2.4GHz trial applied and card safely returned;Pi last reported powered>=5minutes,green ACT off. No confirmed Pi IP,SSH login,completed OS boot or Wi-Fi association. Windows read-only boot inspection completed,but Linux logs were denied without elevation;bootfs Warning not repaired. User is considering Linux laptop for native ext4 access;next obtain distro/version with cat /etc/os-release and reconfirm physical state. No Linux laptop commands,Windows reader install,detector code or sensor wiring completed. See docs/CONTINUE_ON_ANOTHER_PC.md and docs/READ_STARTUP_LOGS_LINUX.md. Full BOM approval/remaining checks unresolved.
 - **Project continuity, 2026-11-04:** Git repository connected to https://github.com/hanssantos02/cctv-smoke-detector. Read README.md and docs/CONTINUE_ON_ANOTHER_PC.md when moving to another PC. Track current documents, original PDFs and final Excel deliverable; local dependencies/scratch work stay excluded. Each PC needs GitHub authentication for pushes. This does not advance the hardware phase.
 - Physical detector performance, camera coverage, power draw, shutdown/restart behaviour and backup runtime remain untested.
 - Research prototype; keep independent certified smoke alarms.

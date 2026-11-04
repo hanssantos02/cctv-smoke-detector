@@ -1,5 +1,8 @@
 # Local scratch files, previews, disposable workbook copies and clone checks.
 /tmp/
+/.codex-attachments/
+/private-card-data/
+.sentrion-before-wifi24-*/
 /outputs/transfer/
 *.bundle
 

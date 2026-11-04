@@ -1,16 +1,16 @@
 # Prototype materials readiness
 
-PHASE 1: MATERIALS BUYING. Prepared 2026-11-04, Asia/Manila. This checklist identifies materials to gather; it does not start Phase 2 or claim that selected parts have arrived.
+Prepared 2026-11-04; current update2026-11-05,Asia/Manila. First-boot inventory and label checks are completed;OS card writing and a2.4GHz retry have been performed. This is now a reference checklist,not the next action. Current task is Phase2 Step19 Linux startup-log diagnosis;see [CONTINUE_ON_ANOTHER_PC.md](CONTINUE_ON_ANOTHER_PC.md). Later detector/final-build parts are not all confirmed owned.
 
 ## First Raspberry Pi boot and access check
 
 | Gather | Quantity | Purpose / condition |
 | --- | ---: | --- |
-| A01 Raspberry Pi 4 Model B, planned 4GB | 1 | The computer being checked. Actual possession/model not yet confirmed. |
-| A12 suitable Pi 4 USB-C supply | 1 | Planned official 15W, 5.1V/3A supply. Verify actual label and condition; the listing alone does not confirm authenticity. Round-to-flat plug adapter only if the actual supply/socket needs it. |
-| A02 compatible microSD card | 1 | Stores the operating system. User owns a card, but model/capacity/condition remain unknown; do not assume it is suitable. BOM target is 32GB. |
-| A16 compatible microSD reader, or existing compatible built-in slot | 1 | Allows the setup computer to prepare the card. |
-| Existing Linux computer and network access | 1 computer | For preparing the card and remotely accessing the Pi over the same network. Wi-Fi avoids an Ethernet-cable purchase; Ethernet is an alternative. |
+| A01 Raspberry Pi 4 Model B,4GB per user | 1 | Board model visible in photo;RAM awaits software verification. Physically on hand. |
+| A12 Pi USB-C supply | 1 | Actual label KSA-15E-051300HU,5.1V/3A,flat pins. Load performance/authenticity untested;no round-to-flat adapter needed if plug fits normally. |
+| A02 existing microSD | 1 | Actual Silvertec32GB microSDHC,UHS-I/A1/Class10. OS written;endurance/real capacity unverified. No new card needed for current log check. |
+| A16 USB card reader | 1 | Used successfully on Windows for boot-file inspection,approved update and safe ejection. |
+| Setup computer and network | 1 computer | Windows preparation completed;Linux laptop proposed for logs,distribution pending. No Ethernet cable reported. |
 
 A19 Pi case or a secure non-conductive support protects the board. A10 fan and A11 heatsinks are planned for the sustained camera workload; they are not prerequisites for identifying a brief successful boot. Actual case fan contents, cooling clearance and current remain pending.
 
@@ -28,7 +28,7 @@ Remote/headless access means controlling the Pi from another computer, without a
 | Peripheral protection and support | A18 inline holder and 500mA fast-blow fuse for the planned external 5V branch; A19 acrylic base, suitable nylon hardware/feet; A10/A11 cooling for sustained tests. |
 | Bench checks | Multimeter; user-owned soldering equipment for loose headers. Other tool ownership/consumables remain to be confirmed. |
 
-The selected A06 assortment contains the planned resistor quantities; no duplicate resistor kit is needed. The A07 purchase pack has six capacitors, of which two are allocated initially. Verify actual component labels before use. No wiring, installation, flashing or power-on steps have been performed.
+The selected A06 assortment contains planned resistor quantities;no duplicate kit needed. A07 pack has six capacitors,two allocated initially. Verify delivered labels before external wiring. Pi OS writing/power trials occurred;camera/sensor/GPIO circuits and detector application remain unbuilt/untested.
 
 ## Items that can wait for the initial Pi check
 
@@ -40,4 +40,4 @@ For the earlier physical-store list, the first Pi-only check may need the round-
 
 - Project quantities and selections: [BOM.md](BOM.md), Table A and physical-store list.
 - Official setup prerequisites, Pi4 15W supply recommendation, remote-access option and micro-HDMI display connection: [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html), checked 2026-11-04.
-- Next confirmation: which of these items are physically on hand, especially the Pi model, power-supply label, microSD model/capacity and card reader. No purchases or ownership are inferred from earlier listing selections.
+- First-boot inventory/labels are recorded. Next:Linux laptop distro/version and current Pi power/card state. Do not repeat answered model/capacity/empty-card questions;do not infer full electrical/boot success from label/write checks.

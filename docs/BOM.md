@@ -2,15 +2,29 @@
 
 PHASE 1: MATERIALS BUYING. Initial price check: 2026-10-22; A04–A12 quotes updated 2026-10-24, Asia/Manila. All costs are Philippine Peso (PHP).
 
+This is the Phase1 BOM artifact;the project itself is now Phase2 initial setup/log diagnosis. See PROGRESS.md and docs/CONTINUE_ON_ANOTHER_PC.md for current progress. Table/workbook values remain reference allowances pending ownership reconciliation.
+
 **Current budget: Table A PHP20,864.00; priced Table B items PHP1,155.00; known line sum PHP22,019.00 + B01 printing cost TBD.** Excel flags the final and grand totals as INPUT NEEDED until the printing cost is entered. B09 includes a provisional PHP98 screenshot quote; label suitability remains pending. Earlier dated amounts are historical; B03/B04/B08 candidate quotes and conditional allowances remain subject to their noted checks.
 
 ## Scope and architecture
+
+### Conditional display accessory for current diagnosis — 2026-11-04
+
+At the time of this candidate check,router admin was unavailable;user subsequently accessed router status/client pages without identifying Pi. Ethernet cable remains unowned. User has a monitor,but its input must be confirmed before buying anything. Cable remains an unselected alternative;current next step is Linux-laptop log reading. **Excluded from TableA/TableB/workbook totals**,not a permanent detector architecture change.
+
+| Item | Exact connection / quantity if selected | PH price evidence | Purpose and buying condition |
+| --- | --- | --- | --- |
+| Micro-HDMI-to-HDMI display cable | Micro-HDMI(TypeD) male at Pi4 to standard HDMI(TypeA) male at monitor;1 cable,1m candidate | [Circuitrocks direct listing](https://circuit.rocks/products/micro-hdmi-to-hdmi-cable-for-raspberry-pi-4),PHP137 displayed,SKU2698,checked2026-11-04;1m black/2m white options. Collection/search render conflicted(PHP105/SKU2612); verify exact variant,price,stock and shipping before purchase | Shows actual boot screen/errors when network diagnosis is inconclusive. Only fits this route if monitor has full-size HDMI input. Obtain monitor model/input photo first. If a regular HDMI cable is already owned, a micro-HDMI male to HDMI female adapter is an alternative, not an additional duplicate purchase; exact PH adapter quote not researched. |
+
+Pi4 uses micro-HDMI rather than mini-HDMI; manufacturer connection guidance is in [Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html). Borrowing a compatible cable/display is sufficient for diagnosis. No purchase, extra cost in totals or completed screen test is claimed.
+
+**Physical inventory, 2026-11-04:** User confirms Pi4 ModelB4GB (model visible; RAM per user), a supply labelled KSA-15E-051300HU/5.1V3A with flat pins, and an empty Silvertec32GB microSDHC marked UHS-I/A1/Class10. Use this card for the initial setup attempt; no new card needed for this step. High-endurance suitability, real capacity and reliability remain unverified. Actual HU supply supersedes earlier HE assumption: **do not buy the A12 round-to-flat adapter if its flat plug fits the intended socket normally.** Table/workbook amounts remain the saved purchase-plan reference, not remaining purchases or actual spending. Reconcile A02 and the obsolete PHP39 plug allowance together with the workbook after initial setup; no workbook prices/quantities have yet changed.
 
 The user confirmed that **camera detection, MQ-2 sensing and battery backup are required**. The paper specifies one indoor Raspberry Pi 4 system using Python and OpenCV (a library that processes images), with a USB/IP camera, audible/visual alerts, Wi-Fi and event snapshots. This BOM budgets a USB camera because no existing CCTV model or stream was supplied. A Raspberry Pi is a small Linux computer; its USB and network interfaces suit this software better than an Arduino/ESP32 microcontroller. An ADS1115 analog-to-digital converter (ADC) translates the MQ-2 voltage into numbers the Pi can read.
 
 **Recommended backup:** a closed, ready-made external CyberPower VP700ELCD UPS (uninterruptible power supply) powers the official Pi USB-C adapter. Its battery and charger are already inside. The existing router/ONT can also be plugged into suitable battery-backed outlets, subject to connector and load checks. This adds size and cost but avoids a beginner assembling loose lithium cells. The UPS stays outside the detector enclosure. This recommendation awaits BOM approval; it is not a purchase.
 
-Assumptions: one indoor camera, existing Linux setup computer and working Wi-Fi/LAN/router, no owned project parts deducted. Budget, deadline, room size and required backup duration remain unspecified. Phase 2 software must validate the actual camera/frame rate, detection method and alarm logic; no performance claim is established by buying these parts.
+Assumptions:one indoor camera and existing network. Windows used for initial OS setup;Linux laptop now proposed for logs,distribution pending. Current tables/workbook remain a dated purchase-plan reference with owned project parts not yet reconciled. Budget,deadline,room size and backup duration remain unspecified. Camera/frame rate,detection method and alarm logic still need validation;buying parts does not establish performance.
 
 ## Price basis and buying checks
 
@@ -54,7 +68,7 @@ The physical-store list covers **A09 LEDs, the A12 plug adapter, A17 push button
 | --- | --- | --- | ---: | --- |
 | A09 | Red LED | 5mm diffused red indicator LED, bare through-hole part with two wire leads | 1 pc | To buy in a physical store |
 | A09 | Green LED | 5mm diffused green indicator LED, bare through-hole part with two wire leads | 1 pc | To buy in a physical store |
-| A12 (plug) | Round-to-flat mains plug adapter | OMNI WRA-001 / WRA-001-PK, 6A 250V AC; round-pin input, flat-pin output | 1 pc | To buy in physical store; PHP 39 listed reference, actual quote/fit pending |
+| A12 (plug) | Historical round-to-flat plug reference | OMNI WRA-001 / WRA-001-PK,6A250V AC;original HE-supply plan | 1 pc reference | NOT NEEDED for actual HU flat-pin supply if it fits socket. PHP39 remains only in unreconciled workbook/reference totals;do not buy for current setup. |
 | A17 | Momentary tactile push buttons | 6×6mm, normally open, through-hole, 4 wire legs; one TEST and one SHUTDOWN | 2 pc | To buy in physical store; PHP5 each / PHP10 total ESTIMATE |
 | A18 | Inline fuse holder + matching fuse | 5×20mm inline holder with insulated wire leads + 500mA (0.5A) fast-blow fuse; confirm 5V DC suitability and fit | 1 set | To buy in physical store; PHP60/set ESTIMATE |
 | A19 (hardware) | Nylon mounting kit | Assorted M2.5/M3 spacers/standoffs with matching screws/nuts; actual sizes/lengths matched to case/layout | 1 set | To buy in physical store; part of combined PHP100 allowance |

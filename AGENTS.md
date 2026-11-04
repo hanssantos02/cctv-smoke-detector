@@ -112,3 +112,6 @@ After Phase 3, every follow-up message from me is part of QA.
 - Update `PROGRESS.md` and affected deliverables before saving a Git checkpoint. A local commit must be pushed before another computer can pull it from GitHub.
 - Keep passwords/tokens, dependency folders and temporary renders out of Git. Do not assume local absolute paths or archived spreadsheet scripts work on the new computer.
 - The current Excel workbook is tracked under `outputs/bom-review-2026-10-22-f01c1aae/`. Do not regenerate it from the archived initial builder and lose later edits.
+- Current resume status is in `PROGRESS.md` and `docs/CONTINUE_ON_ANOTHER_PC.md`. Older dated entries preserve history; do not restart an already completed step because an older entry says it was pending.
+- The scripts in `tools/` are documented Windows-only helpers for the specific inspected card/reader. Do not run them on Linux or automatically rerun a card change when resuming. Read `tools/README.md` first.
+- Local `.codex-attachments/`, `tmp/`, raw logs and private on-card setup backups must stay out of Git. Preserve their relevant sanitized findings in the handoff instead.
