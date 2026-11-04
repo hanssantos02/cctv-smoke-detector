@@ -1,0 +1,34 @@
+# Local scratch files, previews, disposable workbook copies and clone checks.
+/tmp/
+/outputs/transfer/
+*.bundle
+
+# Local dependencies and Python environments.
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Credentials and local configuration; commit examples only.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Future runtime data, not project source.
+/captures/
+/recordings/
+/logs/
+*.log
+
+# Editor/OS temporary files and office lock files.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+.~lock.*
+*.swp
+*.swo

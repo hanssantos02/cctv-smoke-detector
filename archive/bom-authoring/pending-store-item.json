@@ -1,0 +1,262 @@
+{
+  "id": "B12",
+  "mainRow": 40,
+  "mainRender": "A39:J40",
+  "sourceCell": "F40",
+  "priceCell": "I40",
+  "updates": {
+    "D40": "Two non-illuminated, momentary normally open (NO), 2-terminal panel-mount buttons; TEST + SHUTDOWN. Hole size / panel thickness to match actual switch",
+    "F40": "PHYSICAL STORE\nSee Physical Store rows74–81\n₱25 each ESTIMATE; quote TBD"
+  },
+  "changedResults": [],
+  "expected": {
+    "G40": 2,
+    "I40": 25,
+    "J40": 50,
+    "J25": 20864,
+    "I37": 98,
+    "J37": 98,
+    "I29": null,
+    "J29": "INPUT NEEDED",
+    "J41": "INPUT NEEDED",
+    "J44": "INPUT NEEDED"
+  },
+  "reviewStart": 251,
+  "title": "B12 — PANEL PUSH BUTTONS — BUY IN PHYSICAL STORE",
+  "sellerVariant": "Physical store; shop / exact switch model pending",
+  "unitPrice": 25,
+  "qty": 2,
+  "linkLabel": "Physical Store rows74–81; no online listing",
+  "review": [
+    "User will buy two non-illuminated, normally open momentary panel-mount push buttons with two terminals, one TEST and one SHUTDOWN. Momentary means the contacts close while pressed and reopen on release. Avoid latching / self-locking variants.",
+    "Buy with mounting nut / hardware included. Colour is optional; labels identify functions. Confirm mounting-hole diameter, supported panel thickness and low-current signal suitability from the actual switch before enclosure design. These are signal inputs, not mains switches or a direct power cut-off.",
+    "PHP25 each / PHP50 total remains an ESTIMATE, already included once in B12. Shop / actual quote / purchase pending. Physical Store F80 links to BOM Summary J40. Prototype20864; priced final1155; known sum22019 plus B01printingTBD. B10/B11 remain pending; no Phase 2 approval."
+  ],
+  "evidence": "Updated2026-10-24: user assigns B12 to physical store. Two non-illuminated, normally open momentary panel-mount push buttons, two terminals; one TEST and one SHUTDOWN. Mounting hardware included; actual hole size, panel thickness and low-current signal suitability pending selected switch. No latching variants. PHP25 each/PHP50 total remains estimate, not store quote. Physical Store rows74:81; F80 linked to J40. No purchase or phase change.",
+  "extraEdits": [
+    {
+      "sheet": "Physical Store",
+      "range": "A74:F74",
+      "merge": true,
+      "values": [
+        [
+          "B12 — PANEL PUSH BUTTONS — BUY IN PHYSICAL STORE"
+        ]
+      ],
+      "format": {
+        "fill": "#285D36",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#FFFFFF"
+        },
+        "wrapText": true,
+        "rowHeight": 28,
+        "verticalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A75:F75",
+      "values": [
+        [
+          "BOM item",
+          "Part / function",
+          "Exact specification",
+          "Qty",
+          "Unit",
+          "Buying status / store"
+        ]
+      ],
+      "format": {
+        "fill": "#285D36",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#FFFFFF"
+        },
+        "wrapText": true,
+        "rowHeight": 28,
+        "verticalAlignment": "center",
+        "horizontalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A76:F77",
+      "values": [
+        [
+          "B12",
+          "TEST panel button",
+          "Non-illuminated, momentary normally open (NO), 2 terminals, panel mount; mounting nut / hardware included",
+          1,
+          "pc",
+          "TO BUY — physical store; shop / model / actual quote pending"
+        ],
+        [
+          "B12",
+          "SHUTDOWN panel button",
+          "Same specification as TEST; choose matching mounting dimensions where possible",
+          1,
+          "pc",
+          "TO BUY — physical store; shop / model / actual quote pending"
+        ]
+      ],
+      "format": {
+        "fill": "#FFFFFF",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": false,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 65,
+        "verticalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A77:F77",
+      "format": {
+        "fill": "#F5F7FA",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": false,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 65,
+        "verticalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "D76:E77",
+      "format": {
+        "horizontalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A78:F78",
+      "merge": true,
+      "values": [
+        [
+          "Tell the shop: Two non-illuminated, 2-terminal, normally open momentary panel push buttons with mounting nuts. Contacts must reopen when released. No latching / self-locking type."
+        ]
+      ],
+      "format": {
+        "fill": "#FFF4CF",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 44,
+        "verticalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A79:F79",
+      "merge": true,
+      "values": [
+        [
+          "Confirm actual mounting-hole diameter, supported panel thickness and low-current signal suitability. Colour optional; label TEST and SHUTDOWN. These buttons send software requests; they do not directly cut the Pi power."
+        ]
+      ],
+      "format": {
+        "fill": "#F0F3F6",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 44,
+        "verticalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A80:E80",
+      "merge": true,
+      "values": [
+        [
+          "B12 TOTAL ALLOWANCE (PHP; ESTIMATE; already counted in BOM)"
+        ]
+      ],
+      "format": {
+        "fill": "#E8EBEF",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 30,
+        "verticalAlignment": "center"
+      }
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "F80",
+      "formulas": [
+        [
+          "='BOM Summary'!J40"
+        ]
+      ],
+      "format": {
+        "fill": "#E8EBEF",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 30,
+        "verticalAlignment": "center",
+        "horizontalAlignment": "right"
+      },
+      "numberFormat": "\"₱\"#,##0.00"
+    },
+    {
+      "sheet": "Physical Store",
+      "range": "A81:F81",
+      "merge": true,
+      "values": [
+        [
+          "PHP25 each × 2 = PHP50 ESTIMATE, not a store quote. Update BOM Summary I40 with actual unit price; G40 remains 2. This physical-store list is not an additional cost."
+        ]
+      ],
+      "format": {
+        "fill": "#F0F3F6",
+        "font": {
+          "name": "Arial",
+          "size": 10,
+          "bold": true,
+          "color": "#142536"
+        },
+        "wrapText": true,
+        "rowHeight": 44,
+        "verticalAlignment": "center"
+      }
+    }
+  ],
+  "extraRenders": [
+    [
+      "panel-shop-after",
+      "Physical Store",
+      "A74:F81"
+    ]
+  ]
+}

@@ -1,0 +1,105 @@
+Hardware Bill of Materials
+Component      Phase /    Qty   Est. Unit   Total Price   Notes
+Description    Scope            Price       (PHP)
+
+
+CORE COMPUTING & VISION
+
+
+Raspberry      Both       1     ₱ 5,000     ₱ 5,000
+Pi 4 Model B
+(4GB RAM)
+
+32GB High      Both       1     ₱ 450       ₱ 450
+Endurance
+MicroSD
+Card
+
+
+
+
+Flat 120°      Final      1     ₱ 900       ₱ 900
+USB Camera
+Module (PCB
+style)
+
+
+SENSORS & INDICATORS
+
+
+MQ-2 Gas &     Both       1     ₱ 60        ₱ 60
+Smoke
+Sensor
+Module
+
+4-Channel      Both       1     ₱ 30        ₱ 30
+Logic Level
+Converter
+
+90dB Active    Both       1     ₱ 50        ₱ 50
+Buzzer
+Module
+(3-pin)
+Component      Phase /     Qty     Est. Unit   Total Price   Notes
+Description    Scope               Price       (PHP)
+
+
+5mm LEDs       Prototype    1      ₱ 20        ₱ 20
+(Red/Green)
+& Resistors
+
+Panel-Mount    Final        2      ₱ 15        ₱ 30
+LEDs with
+Metal Bezels
+
+
+POWER ARCHITECTURE
+
+
+Official RPi   Prototype    1      ₱ 600       ₱ 600         .
+5V/3A
+USB-C
+Power
+Supply
+
+5V / 4A DC     Final        1      ₱ 350       ₱ 350
+Wall Power
+Adapter
+
+5.5×2.1mm      Final        1      ₱ 20        ₱ 20
+DC Barrel
+Jack (Panel
+Mount)
+
+RPi UPS        Final        1      ₱ 1,100     ₱ 1,100
+HAT (Battery
+Manager)
+
+18650 Li-Ion   Final        2      ₱ 300       ₱ 600
+Batteries
+(Samsung/L
+G)
+
+
+ASSEMBLY HARDWARE
+
+
+830-Point      Prototype   1 set   ₱ 220       ₱ 220
+Breadboard
+& DuPont
+Component      Phase /   Qty     Est. Unit   Total Price   Notes
+Description    Scope             Price       (PHP)
+
+
+Wires
+
+ABS            Final      1      ₱ 300       ₱ 300
+Flame-Resist
+ant
+Enclosure
+
+Internal       Final     1 set   ₱ 250       ₱ 250
+Hardware
+(Perfboard,
+wires, etc)
+

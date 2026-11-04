@@ -1,0 +1,168 @@
+[
+  {
+    "url": "https://makerlab.ph/products/raspberry-pi-4-model-b.js",
+    "title": "Raspberry Pi 4 Model B",
+    "variants": [
+      {
+        "title": "4GB",
+        "sku": "MLE00956",
+        "price": 1044900,
+        "available": false
+      },
+      {
+        "title": "8GB",
+        "sku": "MLE01109",
+        "price": 1719900,
+        "available": true
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/adc-16-bit-4-channel-ads1115.js",
+    "title": "Analog to Digital Converter 16-bit 4-Channel ADS1115",
+    "variants": [
+      {
+        "title": "Default Title",
+        "sku": "MLE00153",
+        "price": 50000,
+        "available": true
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/fr4-universal-protoboard-pcb-double-sided.js",
+    "title": "FR4 Universal Protoboard PCB - Double Sided",
+    "variants": [
+      {
+        "title": "4x6cm",
+        "sku": "MLE00347",
+        "price": 2000,
+        "available": true
+      },
+      {
+        "title": "5x7cm",
+        "sku": "MLE00704",
+        "price": 2500,
+        "available": true
+      },
+      {
+        "title": "6x8cm",
+        "sku": "MLE00705",
+        "price": 3500,
+        "available": true
+      },
+      {
+        "title": "7x9cm",
+        "sku": "MLE00706",
+        "price": 4500,
+        "available": true
+      },
+      {
+        "title": "8x12cm",
+        "sku": "MLE00707",
+        "price": 6900,
+        "available": true
+      },
+      {
+        "title": "5pcs 5x7 CopperPlate",
+        "sku": "MLE04328",
+        "price": 10000,
+        "available": false
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/weatherproof-enclosure-ip65-nema-4-abs-large.js",
+    "title": "Weatherproof Enclosure IP65 NEMA 4 ABS - Large",
+    "variants": [
+      {
+        "title": "240x160x92mm",
+        "sku": "MLE00652",
+        "price": 36500,
+        "available": true
+      },
+      {
+        "title": "222x146x81mm",
+        "sku": "MLE00651",
+        "price": 29900,
+        "available": true
+      },
+      {
+        "title": "240x160x66mm",
+        "sku": "MLE01310",
+        "price": 34900,
+        "available": true
+      },
+      {
+        "title": "200x120x75mm",
+        "sku": "MLE00650",
+        "price": 23000,
+        "available": false
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/40-pin-jumper-wires.js",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://makerlab.ph/products/raspberry-pi-fan.js",
+    "title": "Raspberry Pi Fan",
+    "variants": [
+      {
+        "title": "Default Title",
+        "sku": "MLE01107",
+        "price": 7500,
+        "available": true
+      }
+    ]
+  },
+  {
+    "url": "https://circuit.rocks/products/buzzer-module.js",
+    "title": "Buzzer Module for Arduino - Active Audible Alert 5V",
+    "variants": [
+      {
+        "title": "Default Title",
+        "sku": "AF170",
+        "price": 5500,
+        "available": false
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/official-raspberry-pi-power-supply-5-1v-3a-usb-c-copy.js",
+    "title": "Official Raspberry Pi Power Supply 5.1V 3A USB C",
+    "variants": [
+      {
+        "title": "OKDO",
+        "sku": "MLE02506",
+        "price": 69900,
+        "available": true
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/micro-sd-card-to-usb-adaptor-reader-c286.js",
+    "title": "Micro SD Card to USB adapter reader C286",
+    "variants": [
+      {
+        "title": "Default Title",
+        "sku": "MLE03098",
+        "price": 5000,
+        "available": true
+      }
+    ]
+  },
+  {
+    "url": "https://makerlab.ph/products/raspberry-pi-4-heatsink-aluminum.js",
+    "title": "Raspberry Pi 4 Heatsink Aluminum",
+    "variants": [
+      {
+        "title": "Default Title",
+        "sku": "MLE00957",
+        "price": 12000,
+        "available": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+{
+  "file": "/home/hans/repos/cctv-smoke-detector/outputs/bom-review-2026-10-22-f01c1aae/Sentrion_SDS200_BOM.xlsx",
+  "staged": "/home/hans/repos/cctv-smoke-detector/tmp/review/bom-store-links-staged.xlsx",
+  "links": [
+    {
+      "sheet": 1,
+      "cell": "F8",
+      "url": "https://shopee.ph/2K-Full-HD-Webcam-With-Microphone-4-Million-Pixels-USB-Web-Camera-Adjustable-FOV-Noise-Canceling-i.1080991217.21486145835?extraParams=%7B%22display_model_id%22%3A157101677860%2C%22model_selection_logic%22%3A3%7D&image_ids=ph-11134207-7rasi-m52oa72gyqmb0a&rModelId=157101677860&vItemId=40110614131&vModelId=300892483736&vShopId=1257811163"
+    },
+    {
+      "sheet": 2,
+      "cell": "F75",
+      "url": "https://shopee.ph/USB-Camera-For-Raspberry-Pi-2-Model-B-B-A-3-3B-Pc-i.20469516.1308983059?extraParams=%7B%22display_model_id%22%3A32045113822%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-22120-n6s1qjrv7okv60"
+    },
+    {
+      "sheet": 2,
+      "cell": "B79",
+      "url": "https://circuit.rocks/products/usb-camera"
+    },
+    {
+      "sheet": 2,
+      "cell": "F83",
+      "url": "https://shopee.ph/2K-Full-HD-Webcam-With-Microphone-4-Million-Pixels-USB-Web-Camera-Adjustable-FOV-Noise-Canceling-i.1080991217.21486145835?extraParams=%7B%22display_model_id%22%3A157101677860%2C%22model_selection_logic%22%3A3%7D&image_ids=ph-11134207-7rasi-m52oa72gyqmb0a&rModelId=157101677860&vItemId=40110614131&vModelId=300892483736&vShopId=1257811163"
+    },
+    {
+      "sheet": 1,
+      "cell": "F9",
+      "url": "https://shopee.ph/ENGLAB%E2%98%85MQ-Series-Gas-Sensor-Detection-Modules-for-Gas-Detection-Smog-Alcohol-Methane-Carbon-monoxide-AIR-Quality-Hydrogen-Propane-Detection-Sensor-MQ-2-3-4-5-6-7-8-9-135-i.1021339444.17295791325?extraParams=%7B%22display_model_id%22%3A231949058250%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-7rbk0-lks54h6z1irc91"
+    },
+    {
+      "sheet": 2,
+      "cell": "F91",
+      "url": "https://shopee.ph/ENGLAB%E2%98%85MQ-Series-Gas-Sensor-Detection-Modules-for-Gas-Detection-Smog-Alcohol-Methane-Carbon-monoxide-AIR-Quality-Hydrogen-Propane-Detection-Sensor-MQ-2-3-4-5-6-7-8-9-135-i.1021339444.17295791325?extraParams=%7B%22display_model_id%22%3A231949058250%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-7rbk0-lks54h6z1irc91"
+    },
+    {
+      "sheet": 1,
+      "cell": "F10",
+      "url": "https://shopee.ph/ADS1115-16-Bit-ADC-Module-4-Channel-Programmable-Gain-Amplifier-I2C-Arduino-ESP32-Raspberry-Pi-i.20469516.936425709?extraParams=%7B%22display_model_id%22%3A80024629775%2C%22model_selection_logic%22%3A3%7D&image_ids=a5c8493527960af4d0ba9397035849d5"
+    },
+    {
+      "sheet": 2,
+      "cell": "F98",
+      "url": "https://shopee.ph/ADS1115-16-Bit-ADC-Module-4-Channel-Programmable-Gain-Amplifier-I2C-Arduino-ESP32-Raspberry-Pi-i.20469516.936425709?extraParams=%7B%22display_model_id%22%3A80024629775%2C%22model_selection_logic%22%3A3%7D&image_ids=a5c8493527960af4d0ba9397035849d5"
+    },
+    {
+      "sheet": 1,
+      "cell": "F11",
+      "url": "https://shopee.ph/300pcs-600pcs-1-4W-Resistance-1-30-Kind-Each-10pcs-20pcs-Film-Resistor-Assorted-Kit-with-box-i.1367148707.26913804058?extraParams=%7B%22display_model_id%22%3A246760953056%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134253-8260z-mkwpstqtmxhf04&rModelId=246760953056&vItemId=53656276135&vModelId=282412317684&vShopId=1257811163"
+    },
+    {
+      "sheet": 2,
+      "cell": "F105",
+      "url": "https://shopee.ph/300pcs-600pcs-1-4W-Resistance-1-30-Kind-Each-10pcs-20pcs-Film-Resistor-Assorted-Kit-with-box-i.1367148707.26913804058?extraParams=%7B%22display_model_id%22%3A246760953056%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134253-8260z-mkwpstqtmxhf04&rModelId=246760953056&vItemId=53656276135&vModelId=282412317684&vShopId=1257811163"
+    },
+    {
+      "sheet": 1,
+      "cell": "F12",
+      "url": "https://shopee.ph/330pF-0.1uF-Ceramic-Capacitor-50V-Capacitors-DIY-Electric-Electronics-Project-i.172443349.5245020841?extraParams=%7B%22display_model_id%22%3A70500893090%2C%22model_selection_logic%22%3A3%7D&image_ids=d62780b8b873ab4dfe2f9f6dfaf28c0e"
+    },
+    {
+      "sheet": 2,
+      "cell": "F112",
+      "url": "https://shopee.ph/330pF-0.1uF-Ceramic-Capacitor-50V-Capacitors-DIY-Electric-Electronics-Project-i.172443349.5245020841?extraParams=%7B%22display_model_id%22%3A70500893090%2C%22model_selection_logic%22%3A3%7D&image_ids=d62780b8b873ab4dfe2f9f6dfaf28c0e"
+    },
+    {
+      "sheet": 1,
+      "cell": "F13",
+      "url": "https://shopee.ph/ENGLAB%E2%98%85Active-And-Passive-Buzzer-Module-Low-Level-Trigger-Beeper-Alarm-Module-i.1021339444.23679828092?extraParams=%7B%22display_model_id%22%3A109001349855%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-7rbky-llh8n5fwik38f4"
+    },
+    {
+      "sheet": 2,
+      "cell": "F119",
+      "url": "https://shopee.ph/ENGLAB%E2%98%85Active-And-Passive-Buzzer-Module-Low-Level-Trigger-Beeper-Alarm-Module-i.1021339444.23679828092?extraParams=%7B%22display_model_id%22%3A109001349855%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-7rbky-llh8n5fwik38f4"
+    },
+    {
+      "sheet": 1,
+      "cell": "F15",
+      "url": "https://shopee.ph/Mini-Quiet-Ventilador-120mm-90mm-80mm-70mm-60mm-50mm-40mm-30mm-Fans-DC-12v-24v-5v-Sleeve-Bearing-Industrial-Cooling-Computer-Accessories-12v-Fan-12v-DC-5V-Fan-i.284375657.24893871579?extraParams=%7B%22display_model_id%22%3A224083610443%2C%22model_selection_logic%22%3A3%7D&image_ids=cn-11134207-7ras8-m80hc172zealc5"
+    },
+    {
+      "sheet": 2,
+      "cell": "F126",
+      "url": "https://shopee.ph/Mini-Quiet-Ventilador-120mm-90mm-80mm-70mm-60mm-50mm-40mm-30mm-Fans-DC-12v-24v-5v-Sleeve-Bearing-Industrial-Cooling-Computer-Accessories-12v-Fan-12v-DC-5V-Fan-i.284375657.24893871579?extraParams=%7B%22display_model_id%22%3A224083610443%2C%22model_selection_logic%22%3A3%7D&image_ids=cn-11134207-7ras8-m80hc172zealc5"
+    },
+    {
+      "sheet": 2,
+      "cell": "F133",
+      "url": "https://shopee.ph/Aluminum-Heatsink-Set-with-Adhesive-for-Raspberry-Pi-and-Orange-Pi-(3pcs)-i.1097325508.43515430754?extraParams=%7B%22display_model_id%22%3A320358349938%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134253-81zv8-migu7ptxsmx2c5&rModelId=320358349938&vItemId=40165074723&vModelId=296247443764&vShopId=1257811163"
+    },
+    {
+      "sheet": 1,
+      "cell": "F16",
+      "url": "https://shopee.ph/Circuitrocks-Heatsink-Kit-For-Raspberry-Pi-4-With-Adhesive-i.20469516.3716155051?extraParams=%7B%22display_model_id%22%3A62448204981%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-22120-51eyur5oxkkve0"
+    },
+    {
+      "sheet": 2,
+      "cell": "F140",
+      "url": "https://shopee.ph/Circuitrocks-Heatsink-Kit-For-Raspberry-Pi-4-With-Adhesive-i.20469516.3716155051?extraParams=%7B%22display_model_id%22%3A62448204981%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-22120-51eyur5oxkkve0"
+    },
+    {
+      "sheet": 2,
+      "cell": "F147",
+      "url": "https://shopee.ph/5V-3A-Type-C-3000mA-AC-100V-240V-DC-Power-Supply-Adapter-USB-Type-C-Charger-for-Raspberry-Pi-4-4B-15W-cable-plug-i.215406615.18502612184?extraParams=%7B%22display_model_id%22%3A58783148591%2C%22model_selection_logic%22%3A3%7D&image_ids=1e442d9101dcf19e9b65ed3528ceee0e"
+    },
+    {
+      "sheet": 2,
+      "cell": "F154",
+      "url": "https://shopee.ph/Raspberry-Pi-4B-5V3A-TYPE-C-Interface-15W-Power-Suitable-for-Raspberry-Pi-4th-Generation-B-Type-Official-Power-Supply-i.306592453.21811688321?extraParams=%7B%22display_model_id%22%3A180662749854%2C%22model_selection_logic%22%3A3%7D&image_ids=a5d1d0de2c898f4eb1de453426844e3b"
+    },
+    {
+      "sheet": 1,
+      "cell": "F17",
+      "url": "https://shopee.ph/Raspberry-Pi-4B-5V3A-TYPE-C-Interface-15W-Power-Suitable-for-Raspberry-Pi-4th-Generation-B-Type-Official-Power-Supply-i.306592453.21811688321?extraParams=%7B%22display_model_id%22%3A180662749854%2C%22model_selection_logic%22%3A3%7D&image_ids=a5d1d0de2c898f4eb1de453426844e3b"
+    },
+    {
+      "sheet": 2,
+      "cell": "F162",
+      "url": "https://www.officewarehouse.com.ph/product/9476/"
+    },
+    {
+      "sheet": 2,
+      "cell": "F169",
+      "url": "https://shopee.ph/Breadboard-Plastic-Mounting-Plate-with-Rubber-Feet-Arduino-Uno-Compatible-Prototype-Base-DIY-i.20469516.827108383?extraParams=%7B%22display_model_id%22%3A72043513800%2C%22model_selection_logic%22%3A3%7D&image_ids=64fa7b72bd218887a6b5837880b350c3"
+    },
+    {
+      "sheet": 2,
+      "cell": "F176",
+      "url": "https://shopee.ph/Clear-Acrylic-Sheet-%E2%80%93-Pre-Cut-or-Custom-Size-Plexiglass-Perspex-Plate-i.313399881.6369735167"
+    },
+    {
+      "sheet": 2,
+      "cell": "F183",
+      "url": "https://shopee.ph/Auxiliary-Fan-Bracket-for-Auxiliary-Fan-(PAIR)-i.419983478.17769717845?extraParams=%7B%22display_model_id%22%3A190222631984%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-824iz-mdznzdhz96h33a"
+    },
+    {
+      "sheet": 1,
+      "cell": "F24",
+      "url": "https://shopee.ph/Raspberry-Pi-4-Black-Case-with-Fan-i.18252381.11504087990?extraParams=%7B%22display_model_id%22%3A82034797060%2C%22model_selection_logic%22%3A3%7D&image_ids=527f288ec8b8b1a2df7f1ac2e7440e96"
+    },
+    {
+      "sheet": 2,
+      "cell": "F190",
+      "url": "https://shopee.ph/Raspberry-Pi-4-Black-Case-with-Fan-i.18252381.11504087990?extraParams=%7B%22display_model_id%22%3A82034797060%2C%22model_selection_logic%22%3A3%7D&image_ids=527f288ec8b8b1a2df7f1ac2e7440e96"
+    },
+    {
+      "sheet": 1,
+      "cell": "F30",
+      "url": "https://shopee.ph/FR4-Universal-Protoboard-PCB-Double-Sided-i.1367148707.27114059630?extraParams=%7B%22display_model_id%22%3A217878076022%2C%22model_selection_logic%22%3A2%7D&image_ids=cn-11134207-7ras8-m2bws329golab1"
+    },
+    {
+      "sheet": 2,
+      "cell": "F197",
+      "url": "https://shopee.ph/FR4-Universal-Protoboard-PCB-Double-Sided-i.1367148707.27114059630?extraParams=%7B%22display_model_id%22%3A217878076022%2C%22model_selection_logic%22%3A2%7D&image_ids=cn-11134207-7ras8-m2bws329golab1"
+    },
+    {
+      "sheet": 1,
+      "cell": "F31",
+      "url": "https://shopee.ph/Raspberry-Pi-40-Pin-GPIO-Cable-Male-to-Femal-Or-Female-to-Female-Extension-Cable-Adapter-for-Orange-Pi-Raspberry-Pi-5-4B-3B-3B-i.52451576.27677996896?extraParams=%7B%22display_model_id%22%3A195834642636%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-7rd5u-m6sex0xahcwr15"
+    },
+    {
+      "sheet": 2,
+      "cell": "F204",
+      "url": "https://shopee.ph/Raspberry-Pi-40-Pin-GPIO-Cable-Male-to-Femal-Or-Female-to-Female-Extension-Cable-Adapter-for-Orange-Pi-Raspberry-Pi-5-4B-3B-3B-i.52451576.27677996896?extraParams=%7B%22display_model_id%22%3A195834642636%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-7rd5u-m6sex0xahcwr15"
+    },
+    {
+      "sheet": 1,
+      "cell": "F32",
+      "url": "https://shopee.ph/30cm-JST-SM-2P-3P-4P-5P-6P-Automobile-Quick-Connect-Wire-Connector-Male-and-Female-Plug-Kit-Motorcycle-i.526902221.15291436961?extraParams=%7B%22display_model_id%22%3A164120865679%2C%22model_selection_logic%22%3A3%7D&image_ids=ff5becaf471caeb9890aa1dd59d398a2"
+    },
+    {
+      "sheet": 2,
+      "cell": "F211",
+      "url": "https://shopee.ph/30cm-JST-SM-2P-3P-4P-5P-6P-Automobile-Quick-Connect-Wire-Connector-Male-and-Female-Plug-Kit-Motorcycle-i.526902221.15291436961?extraParams=%7B%22display_model_id%22%3A164120865679%2C%22model_selection_logic%22%3A3%7D&image_ids=ff5becaf471caeb9890aa1dd59d398a2"
+    },
+    {
+      "sheet": 1,
+      "cell": "F35",
+      "url": "https://shopee.ph/UVIG-20PCS-3-5-8-10mm-LED-Plastic-Lamp-LED-Diode-Holder-Black-Clip-Bezel-Mount-i.172102548.2698466736?extraParams=%7B%22display_model_id%22%3A6363764858%2C%22model_selection_logic%22%3A3%7D&image_ids=11934a8753699745866131e6cd1f6dc1"
+    },
+    {
+      "sheet": 2,
+      "cell": "F218",
+      "url": "https://shopee.ph/UVIG-20PCS-3-5-8-10mm-LED-Plastic-Lamp-LED-Diode-Holder-Black-Clip-Bezel-Mount-i.172102548.2698466736?extraParams=%7B%22display_model_id%22%3A6363764858%2C%22model_selection_logic%22%3A3%7D&image_ids=11934a8753699745866131e6cd1f6dc1"
+    },
+    {
+      "sheet": 2,
+      "cell": "F225",
+      "url": "https://shopee.ph/Groove-Rubber-Grommet-16-60mm-Blanking-Hole-Wiring-Cable-Gasket-Rubber-Seal-Assortment-Set-For-Protects-Wire-Cable-Hardware-Tool-i.1234447918.25424636102?extraParams=%7B%22display_model_id%22%3A245648335336%2C%22model_selection_logic%22%3A3%7D&image_ids=cn-11134207-7r98o-lu797has8o6rb7"
+    },
+    {
+      "sheet": 1,
+      "cell": "F36",
+      "url": "https://shopee.ph/5pcs-Rubber-Lined-Clips-6-60mm-R-type-STainless-Steel-304-Wiring-Hose-Clamp-Cable-Mounting-Fix-Fastener-Hardware-Electrical-Fittings-Water-Pipe-Bracket-Sasa-Hardware-i.1212696620.26268127323?extraParams=%7B%22display_model_id%22%3A311364363257%2C%22model_selection_logic%22%3A3%7D&image_ids=cn-11134207-7ras8-m2t2dx94d7tz16"
+    },
+    {
+      "sheet": 2,
+      "cell": "F232",
+      "url": "https://shopee.ph/5pcs-Rubber-Lined-Clips-6-60mm-R-type-STainless-Steel-304-Wiring-Hose-Clamp-Cable-Mounting-Fix-Fastener-Hardware-Electrical-Fittings-Water-Pipe-Bracket-Sasa-Hardware-i.1212696620.26268127323?extraParams=%7B%22display_model_id%22%3A311364363257%2C%22model_selection_logic%22%3A3%7D&image_ids=cn-11134207-7ras8-m2t2dx94d7tz16"
+    },
+    {
+      "sheet": 1,
+      "cell": "F37",
+      "url": "https://shopee.ph/Colorful-Self-Adhesive-Cable-Labels-Nylon-Wire-Stickers-for-Easy-Identification-Ideal-for-Home-Office-i.196214868.43608162560?extraParams=%7B%22display_model_id%22%3A285688745424%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-823qo-mom4ttqfrx8u9c"
+    },
+    {
+      "sheet": 2,
+      "cell": "F246",
+      "url": "https://shopee.ph/Colorful-Self-Adhesive-Cable-Labels-Nylon-Wire-Stickers-for-Easy-Identification-Ideal-for-Home-Office-i.196214868.43608162560?extraParams=%7B%22display_model_id%22%3A285688745424%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134201-823qo-mom4ttqfrx8u9c"
+    }
+  ],
+  "changedCells": {
+    "1": [
+      "D40",
+      "F40"
+    ],
+    "2": []
+  },
+  "expected": {
+    "G40": 2,
+    "I40": 25,
+    "J40": 50,
+    "J25": 20864,
+    "I37": 98,
+    "J37": 98,
+    "I29": null,
+    "J29": "INPUT NEEDED",
+    "J41": "INPUT NEEDED",
+    "J44": "INPUT NEEDED"
+  },
+  "noteUpdates": [
+    {
+      "sheet": 1,
+      "cell": "I40",
+      "text": "Updated2026-10-24: user assigns B12 to physical store. Two non-illuminated, normally open momentary panel-mount push buttons, two terminals; one TEST and one SHUTDOWN. Mounting hardware included; actual hole size, panel thickness and low-current signal suitability pending selected switch. No latching variants. PHP25 each/PHP50 total remains estimate, not store quote. Physical Store rows74:81; F80 linked to J40. No purchase or phase change."
+    }
+  ]
+}

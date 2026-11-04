@@ -1,0 +1,80 @@
+     ​
+
+     Product Specification
+
+
+                       Table # Product Specification
+
+                             Product Specification
+
+Category               Specification
+
+Product Name           Sentrion SDS200
+
+Product Type           CCTV-Based Smoke Detection and Automated Alert
+
+                       System
+
+Description            Sentrion SDS200 is a CCTV-based smoke detection and
+
+                       automated alert system designed to enhance early fire
+
+                       hazard detection in indoor environments. It utilizes
+
+                       real-time video feeds and image processing techniques
+
+                       to identify visible smoke and trigger alerts. The system
+
+                       improves response time and provides a practical safety
+
+                       solution using existing CCTV infrastructure.
+
+Detection Method       Vision-based smoke detection using image processing
+
+                       (OpenCV)
+
+Input Source           IP Camera / USB Camera (CCTV integration)
+
+Processing Unit        Raspberry Pi 4 Model B
+
+Software Platform      Python with OpenCV library
+
+Detection Features     Motion,    color,   and     smoke   pattern   analysis   with
+
+                       6multi-frame verification
+                         Table # Product Specification
+
+                             Product Specification
+
+Alert System             Buzzer (audible alarm) and LED indicator
+
+Notification Method      Local network alert (Wi-Fi); optional remote notification
+
+                         (mobile/email/web)
+
+Connectivity             Wi-Fi / Local Network
+
+Power Supply             5V Power Adapter
+
+Backup Power             Optional battery backup
+
+Data Storage             MicroSD Card
+
+Recorded Data            Event logs, timestamps, and snapshot images
+
+Processing Type          Real-time video frame processing
+
+Detection      Response Within a few seconds after confirmed detection
+
+Time
+
+Monitoring Capability    Continuous (24/7 operation)
+
+Enclosure                A6666666BS casing
+
+System Design            Modular configuration for easy maintenance and upgrade
+
+Application              Indoor environments (offices, retail stores, commercial
+
+                         spaces)
+

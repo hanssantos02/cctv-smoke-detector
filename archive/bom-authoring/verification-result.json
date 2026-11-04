@@ -1,0 +1,28 @@
+[
+  {
+    "path": "/home/hans/repos/cctv-smoke-detector/outputs/bom-review-2026-10-22-f01c1aae/Sentrion_SDS200_BOM.xlsx",
+    "main_totals": {
+      "J25": 21645.6,
+      "J41": 1470,
+      "J44": 23115.6
+    },
+    "line_items": 31,
+    "notes": 47,
+    "formula_errors": 0,
+    "power_A": 2.5,
+    "power_W": 12.75
+  },
+  {
+    "path": "/home/hans/repos/cctv-smoke-detector/tmp/review/native-check/Sentrion_SDS200_BOM.xlsx",
+    "main_totals": {
+      "J25": 21645.6,
+      "J41": 1470,
+      "J44": 23115.6
+    },
+    "line_items": 31,
+    "notes": 47,
+    "formula_errors": 0,
+    "power_A": 2.5,
+    "power_W": 12.75
+  }
+]
