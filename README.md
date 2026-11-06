@@ -20,23 +20,23 @@ git pull --ff-only origin main
 
 Preserve local edits if Git reports a conflict; do not reset or force-push.
 
-Ask the next assistant:
+Start the new chat with:
 
-> Read AGENTS.md, PROJECT.md, PROGRESS.md and docs/CONTINUE_ON_ANOTHER_PC.md. We are in Phase 2, Step 19: initial Pi setup is authorized, but boot/network access is still unverified. Resume the Linux-laptop startup-log investigation. First obtain the laptop distribution/version with cat /etc/os-release and confirm the hardware's current power/card location. Do not restart BOM sourcing, rewrite the card, install packages or run sudo without the applicable approval.
+```text
+$ce-handoff resume docs/handoffs/pi-prototype-powered-off.md
+```
 
-## Current state — 2026-11-05, Asia/Manila
+The new chat should read [AGENTS.md](AGENTS.md), [PROJECT.md](PROJECT.md), [PROGRESS.md](PROGRESS.md) and [the current continuation guide](docs/CONTINUE_ON_ANOTHER_PC.md). The older Linux-startup handoff is historical; do not restart its completed diagnostics.
 
-- **Phase 2: initial Pi setup and diagnosis.** Full detector prototyping is unfinished; Phase 3 is not authorized.
-- Hardware identified: Pi 4 Model B (4GB per user), Raspberry Pi-labelled KSA-15E-051300HU USB-C supply (5.1V/3A, flat pins), Silvertec 32GB microSDHC, and a USB reader.
-- User-operated Raspberry Pi Imager **2.0.12** reported a completed Raspberry Pi OS **64-bit** write with hostname, account, Wi-Fi and SSH customisations. Logs/OS identity have not yet been inspected on the running Pi.
-- Hostname **sentrion-pi**, username **sentrion**. Passwords are private and absent from Git.
-- Original 5GHz setup was unreachable. An approved **2.4GHz trial** changed the card's network target and refreshed matching cloud-init instance IDs without erasing the OS. Password/account settings were preserved and modified files read back successfully.
-- User confirmed the card returned to the Pi and a powered retry of at least five minutes. Green activity subsequently went dark; that alone does not establish a boot failure. **No successful SSH login, Pi IP or Wi-Fi association is confirmed.**
-- The last reported state is **Pi powered, microSD seated**, with sensors/camera/GPIO circuits disconnected for this check. Reconfirm physical state on resuming; it does not transfer with Git.
-- Next: identify the user's **Linux laptop distribution/version**, then plan read-only ext4 access to startup logs. No commands or installs have been run on that laptop. Windows Linux Reader was downloaded but **not installed**; that alternative is deferred.
-- No smoke-detector application, sensor wiring, detection validation or complete prototype exists yet.
+## Current state — 2026-11-06, Asia/Manila
 
-Start with [the current handoff](docs/CONTINUE_ON_ANOTHER_PC.md), not an earlier dated checkpoint in the history.
+- **Phase2, Step45 complete:** user shut down through the Pi desktop, then confirmed power unplugged. Pi is in its case with fan attached; microSD remains seated as last reported. No power-on is needed merely to resume the chat.
+- **Pi setup passed:** Pi4 ModelB Rev1.5,3.7Gi usable RAM; Debian13 Trixie/13.7 metadata,aarch64,Asia/Manila clock synchronized,root21G free. Supply label5.1V/3A with flat pins;Silvertec32GB card. Laptop is Linux Mint22.3.
+- **New router and SSH passed:** saved Wi-Fi updated with a private on-card backup. Hostname `sentrion-pi.local`,account `sentrion`,last observed address `192.168.100.211` (can change). No reason to repeat card edits or old discovery scans. Earlier router failure remains undiagnosed.
+- **Camera basic tests passed:** USB349c:3307,uvcvideo;video0 capture/video1 metadata. VGA stream~25.3fps (30requested),actual2560×1440 JPEG decoded/viewed,short1440p stream~15.1fps (20requested),exit0,throttled0x0,38.9C. Native sensor resolution,current and long-run reliability remain unverified.
+- **Desktop access passed per user:** WayVNC on Pi and TigerVNC laptop viewer path worked. After a later boot,launch `vncviewer sentrion-pi.local` on the laptop. Do not reinstall or enable autologin without new evidence.
+- **Next hardware checkpoint is Step42, deferred:** delivered MQ-family module has fitted pins; ADS1115-marked board includes a loose straight header. Header dry-fit/soldering and electrical tests are unfinished. Fan spinning is user-confirmed;its actual power pins/rating must be identified before GPIO allocation. No sensor wiring,detector application,complete prototype or Phase3 approval.
+- This source checkpoint is intended for `main` at the user's request. Git history and `origin/main` identify publication. Photos/raw logs/private backups remain local and excluded;sanitized observations needed for continuity are saved.
 
 ## Saved work
 
@@ -46,11 +46,15 @@ Start with [the current handoff](docs/CONTINUE_ON_ANOTHER_PC.md), not an earlier
 | [Project brief](PROJECT.md) | Scope, identified hardware, inventory and unresolved procurement |
 | [Progress](PROGRESS.md) | Current action and complete dated troubleshooting history |
 | [Current handoff](docs/CONTINUE_ON_ANOTHER_PC.md) | Cross-platform context, permissions and exact next checkpoint |
-| [Session snapshot](docs/handoffs/pi-startup-logs-linux.md) | Immutable account of this troubleshooting session |
+| [Current session snapshot](docs/handoffs/pi-prototype-powered-off.md) | Powered-off state, verified milestones and exact deferred hardware checkpoint |
+| [Earlier snapshot](docs/handoffs/pi-startup-logs-linux.md) | Historical Windows investigation before Linux/new-router success |
 | [Linux log plan](docs/READ_STARTUP_LOGS_LINUX.md) | Distribution-first approach, read-only mounting and log targets |
-| [Prototype guide](docs/BUILD_PROTOTYPE.md) | Saved instructions and observed outcomes through Step 19 |
+| [Prototype guide](docs/BUILD_PROTOTYPE.md) | Initial setup history and current continuation |
+| [New-router setup and checks](docs/CHANGE_WIFI_LINUX.md) | Wi-Fi update,safe transfer,SSH login,initial health/OS/time/storage results and next readiness checkpoint |
+| [Camera checks](docs/CAMERA_CHECK.md), [connections](docs/WIRING.md) | Actual webcam identity,advertised modes,decoded images,achieved rates and remaining limits |
+| [Desktop access](docs/REMOTE_DESKTOP_LINUX.md) | Working VNC setup, terminal roles and safe shutdown |
 | [Card inspection](docs/CARD_INSPECTION.md) | What was actually read, denied Linux access and approved card changes |
-| [Testing log](docs/TESTING.md) | Verified results versus unresolved boot/connectivity |
+| [Testing log](docs/TESTING.md) | Passed initial setup checks and untested detector components |
 | [Windows alternative](docs/READ_STARTUP_LOGS_WINDOWS.md) | Deferred signed-reader proposal; installation not approved |
 | [BOM](docs/BOM.md), [review](docs/BOM_REVIEW.md) | Buying decisions, dated price evidence and remaining compatibility checks |
 | [Excel BOM](outputs/bom-review-2026-10-22-f01c1aae/Sentrion_SDS200_BOM.xlsx) | Existing workbook, formulas and clickable source links; unchanged in this session |

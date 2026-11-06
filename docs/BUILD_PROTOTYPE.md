@@ -2,7 +2,7 @@
 
 PHASE 2: PROTOTYPING — initial Raspberry Pi setup. Started 2026-11-04.
 
-Current as of2026-11-05:initial Pi setup is authorized;Windows OS image writing and an approved2.4GHz configuration retry have been performed. No successful boot/network login,complete detector prototype or sensor wiring is claimed. This guide preserves sequential instructions/results;early pending checks are historical. **Resume at Step19 using docs/CONTINUE_ON_ANOTHER_PC.md and docs/READ_STARTUP_LOGS_LINUX.md**,not Step1. Remaining BOM issues stay in PROGRESS.md.
+Current2026-11-06: Step45 complete;Pi shut down through desktop and power unplugged per user. Pi setup,SSH,basic camera checks and VNC access passed. User deferred soldering;**Step42 header fit/soldering is unfinished**. Resume through [current continuation](CONTINUE_ON_ANOTHER_PC.md) and Step42 when user is ready,not Step1/19. No sensor wiring or complete detector prototype. Older instructions/results below are dated history;remaining BOM issues stay in PROGRESS.md.
 
 ## Step 1 — Identify the hardware with power disconnected
 
@@ -369,14 +369,62 @@ Normally the task is reading logs already produced if startup reached cloud-init
 
 User asks if their Linux laptop would be easier. Recommended for native ext4/startup-log inspection;Windows Reader installation is now deferred and remains unexecuted. Follow [READ_STARTUP_LOGS_LINUX.md](READ_STARTUP_LOGS_LINUX.md). First obtain distribution/version (`cat /etc/os-release`,read-only,no sudo). Do not move the currently powered card or guess mount commands/device names. Mounting/permissions and physical handling follow after actual laptop details. Using laptop just for diagnosis does not require migrating this repository/chat or installing Pi development software.
 
-## What follows this checkpoint
+## Earlier transition from Step19 — superseded by the current checkpoint
 
-Current continuation is Linux-laptop log access:obtain distribution/version and reconfirm hardware state before power-off/card handling,device identification or mount commands. OS64-bit image was written and2.4GHz retry tested without restoring access;running release/boot remains unverified. Do not repeat completed setup/scans or automatically rewrite the card. No detector application/sensor circuit is implemented.
+Updated2026-11-06:Linux Mint22.3 identified;user confirms Pi off/card connected. Read-only rootfs mount verified with ro,norecovery. Cloud-init logs show two completed setup runs,zero latest fatal errors and a missing cc_netplan_nm_patch warning. Installed OS metadata is Debian13 Trixie;no live login established. Startup snapshots show Wi-Fi down/noIPv4,but later network state is unknown and no persistent journal was found. User-run saved-state check shows WirelessEnabled=true. User-run protected Netplan summary confirms saved wlan0/AP/password and DHCP IPv4;system default NetworkManager verified. Laptop currently on5GHz/channel48. User now clarifies they are on a different router and confirms the Pi should join this laptop's current Wi-Fi. The old matching2.4GHz suggestion is superseded. Continue Step20 in [CHANGE_WIFI_LINUX.md](CHANGE_WIFI_LINUX.md):prepared helper privately collects new password,asks final YES,backs up/updates the installed profile and restores read-only mount. User-run update now completed with backup/readback PASS and independently verified read-only mount restoration. Safe unmount/reader removal/card return completed;new-router power-on reported. Step25 now PASS:hostname resolves192.168.100.211 and TCP22 responds. Step26 authenticated SSH login as sentrion now PASS (user screenshot). Step27 initial idle checks PASS:Pi4 ModelB Rev1.5,3.7Gi RAM,38.4C,throttled=0x0. Step28 running OS/time/storage PASS:Debian13 Trixie/13.7 metadata,Asia/Manila clock synchronized,root21G and boot417M available. Initial Pi setup milestone complete. Step29 camera availability user-confirmed. Step30 photo verifies generic webcam/clip/USB-A plug;model/current/native capabilities remain unknown. Step31 USB camera connection user-confirmed. Step32 USB/UVC detection PASS:349c:3307 Generic HD video,uvcvideo,video0/video1 links,v4l2-ctl available. Step33 confirms video0 capture,video1 metadata,v4l2-ctl1.30.1,MJPG output up to2560x1440 advertised. Step34 stream transport PASS:~25.3fps observed (30requested),exit0,flags0x0/38.4C. Step35 target readiness user-confirmed. Step36 VGA snapshot transfer/decoding/viewing PASS:640x480 RGB JPEG15944bytes,recognizable image. Step37 wider-scene VGA snapshot decoded/viewed (16068bytes) with recognizable edges. Step38 actual2560x1440 RGB JPEG104216bytes transferred/decoded/viewed PASS. Step39 subsequently passed at~15.1fps (20requested),exit0,throttled0x0/38.9C per [CAMERA_CHECK.md](CAMERA_CHECK.md);current connection table in [WIRING.md](WIRING.md). Stress/reliability tests and full detector remain unperformed.5GHz itself is not diagnosed as a fault. Do not repeat completed setup/scans or automatically rewrite the card. No detector application/sensor circuit is implemented.
 
 Headless access means operating the Pi from this computer over the local network without a separate Pi monitor or keyboard. Wi-Fi settings are now reported entered; actual connectivity remains to be tested after boot. Keep Wi-Fi/account passwords private and enter them locally, outside project files and chat.
 
 No Linux setup commands or `dialout` group changes apply to preparing the card on this Windows PC. The user operated Imager to install the OS; the assistant ran only read-only local storage checks and project-file edits, with no assistant-run package installation or flashing. Any later Linux commands target the Pi and will be explained before use.
 
+## Step41 — identify the delivered sensor and converter boards (2026-11-06)
+
+Current checkpoint: Pi setup and basic camera tests passed. The Pi is already in its case with fan connected and spinning according to the user. Exact fan power pins/rating remain unknown. Inspecting loose boards does not require opening the case or changing any connections.
+
+**Before handling:** leave loose modules unpowered and disconnected, away from the powered Pi. Do not insert sensor wires into the Pi. This step identifies parts; actual voltage and pin assignments follow verified labels and documentation.
+
+1. Place the **MQ-2 module** and **ADS1115 board**, if available, on a clear dry surface. The MQ-2 is the gas/smoke sensor assembly, usually recognizable by its metal mesh cylinder. The ADS1115 is an analog-to-digital converter: it lets the Pi read a varying electrical voltage from the sensor. Appearance alone does not establish either board's identity or pin order.
+2. Send clear photos of the top and underside of both loose boards, showing printed model/pin labels and whether header pins are fitted. A header is the row of metal pins used to attach jumper wires. Do not solder or plug anything in yet. If either board is missing, report which one instead of buying a substitute automatically.
+3. Have the breadboard, jumper wires, resistor kit and multimeter nearby if available. The breadboard holds temporary connections without soldering; resistors will reduce the sensor signal to a suitable level; the multimeter checks voltage before connecting the Pi input. Report missing parts/tools before electrical steps.
+
+**Check before continuing:** inspect actual labels, headers and available parts. Verify the existing fan connection and GPIO access before allocating pins. No sensor/ADC connection is authorized by these photos alone. Do not connect a 5V sensor signal to Pi GPIO. Next provide a board-specific wiring plan and measurement checkpoints after these facts are known. No installation, sudo or package version choice is needed for this inspection.
+
+## Step42 — dry-fit the ADS1115 header, without solder (2026-11-06)
+
+### What the photos establish
+
+The supplied MQ-family sensor module has a metal mesh sensing can, blue adjustment trimmer and an already fitted four-pin right-angle header. In the underside photo, with that header pointing right, the printed labels run from top to bottom: `VCC`, `GND`, `DO`, `AO`. This is the photographed orientation, not a view-independent pin-number diagram. The board says Flying-Fish/MQ Sensor; an exact MQ-2 marking on the sensing can is not readable. Keep the trimmer in its delivered position. No supply or signal test has occurred.
+
+The other bag visibly contains a board marked `ADS1115` / `16Bit I2C ADC+PGA`, with empty header holes and a separate straight header strip. Its visible label order is `VDD`, `GND`, `SCL`, `SDA`, `ADDR`, `ALRT`, `A0`, `A1`, `A2`, `A3`. The underside, chip marking and solder quality are not established through the bag. A board label alone is not a functional chip test.
+
+### Prepare the mechanical fit
+
+**Before starting:** both modules and the breadboard must remain disconnected from every power source. Leave the powered Pi and its fan wiring untouched. Do not power the soldering iron for this checkpoint. A pin resting in a hole is not a reliable electrical connection; it will need solder later.
+
+1. Open the ADS1115 bag and remove the board and header. Handle the board by its edges and place the bag aside, not under a powered circuit. Have the breadboard nearby, with no wires or power attached.
+2. Check that the board has ten holes in its labeled connector row and the header has ten pins. If the strip length differs, report it; do not cut or force anything yet.
+3. Push the **long ends** of the straight header into the breadboard, leaving the black plastic spacer and **short ends** above it. Put the strip along successive numbered rows, so each pin uses a different row number. The breadboard is only holding it straight at this point.
+4. Lower the board onto the exposed short ends. The side with the ADS1115 lettering and small components faces up. Each short end passes through one labeled hole; the board sits on the black plastic spacer underneath, with metal tips visible above its pads. Stop if it does not fit gently.
+
+```text
+     short metal tips protrude above the ten pads
+     ADS1115 board, lettering/components facing up
+     black header spacer underneath board
+     long header ends inserted in unpowered breadboard
+```
+
+**Check before continuing:** send a clear top and side view of the fitted board, plus its underside before fitting if possible. Confirm that the breadboard, soldering iron, solder, safe iron stand, and a multimeter are available; the user already owns soldering equipment, so this is readiness checking, not a new purchase request. Do not solder or connect jumper wires yet. Next inspect orientation and explain soldering technique, hot-tip/fume precautions and joint checks before the permanent operation. Fan pins still need identification before assigning any Pi GPIO connections.
+
+The mechanical assembly method is supported by [Adafruit's ADC header assembly guide](https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/assembly-and-wiring). Their breakout layout differs; use this delivered board's own labels rather than copying an Arduino wiring picture. Future ADC voltage limits must follow the [TI ADS1115 datasheet](https://www.ti.com/lit/ds/symlink/ads1115.pdf); gain selection does not authorize a sensor signal beyond the ADC supply rails. No electrical connection is prescribed at this step.
+
+## Step43 — desktop access requested; soldering deferred
+
+2026-11-06: user will solder later. Asked safe shutdown, then chose setting up Pi desktop access on this laptop now. Keep Pi powered and follow [REMOTE_DESKTOP_LINUX.md](REMOTE_DESKTOP_LINUX.md). No shutdown or header assembly is confirmed; Step42 remains unfinished. No sensor wires should be connected.
+
 ## Official references
 
 Checked 2026-11-04. The manufacturer describes boot media, model-specific power supplies and headless setup in [Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html). The Windows installer is linked from the official [Raspberry Pi software page](https://www.raspberrypi.com/software/). Use the official download when we reach the software step.
+
+## Step45 result and next session — 2026-11-06
+
+User reports VNC desktop access working,then shut down through that desktop. TigerVNC reset104 appeared as connection ended;user subsequently confirmed Pi unplugged. No sensor/ADC wiring or header soldering occurred. Next hardware work remains Step42 after user readiness;leave Pi off until needed. Read the current continuation guide/powered-off handoff instead of restarting old boot/card/network steps.

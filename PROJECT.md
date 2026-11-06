@@ -1,12 +1,16 @@
 # PROJECT.md: Project Brief
 
-Updated 2026-11-05. Original brief came from the supplied product-specification PDF and user clarifications on 2026-10-22. Current status supersedes older dated sourcing/status entries; recommendations and assumptions remain distinct from confirmed requirements.
+Updated 2026-11-06. Original brief came from the supplied product-specification PDF and user clarifications on 2026-10-22. Current status supersedes older dated sourcing/status entries; recommendations and assumptions remain distinct from confirmed requirements.
 
 ## Basics
 - **Project name:** Sentrion SDS200
 - **Goal:** Indoor CCTV-based visible-smoke detection and automated local/network alerts.
 - **Required features:** Camera detection, MQ-2 sensing and battery backup (user-confirmed); buzzer, LED, Wi-Fi/local-network alerts, event logs, timestamps and snapshots (paper).
 - **Optional features:** Remote/mobile/email/web notifications; final method not chosen.
+
+- **Current router change,2026-11-06:** User is now on a different router and selected the Linux laptop's current Wi-Fi as the new Pi target. User-run offline update replaced the installed wlan0 profile with private password entry;on-card backup/readback passed and rootfs returned read-only. After safe return/power-on,sentrion-pi.local resolves192.168.100.211 and TCP22 responds with SSH banner. First authenticated SSH login as sentrion subsequently succeeded;live board/RAM/idle-health checks subsequently show Pi4 ModelB Rev1.5,3.7Gi usable RAM,38.4C and throttled=0x0. Running OS/time/storage baseline passed:Debian13 Trixie/13.7 metadata,Asia/Manila clock synchronized/NTP active,root21G and boot417M available. Initial Pi setup and basic camera tests complete;full-load/long-run reliability remains unverified. Boot seed and account/SSH/instance IDs were not edited. See docs/CHANGE_WIFI_LINUX.md.
+
+- **Camera on hand,2026-11-06:** User confirms USB camera physically available for next prototype check. User photo shows enclosed black webcam with clip,USB-A plug and front WEBCAM/2K QUAD HD marking. Exact model,power rating,native resolution,FPS and Linux/UVC function remain unverified;do not assign either earlier store candidate based on appearance. USB enumeration now confirms349c:3307 Generic HD video with uvcvideo,and camera links to video0/video1;v4l2-ctl installed. Per-node Device Caps now identify video0 image capture and video1 metadata. Installed v4l2-ctl1.30.1 reports MJPG output up to2560x1440 at30/20fps and YUYV up to1280x720 at15/10fps. First640x480 MJPG stream completed with exit0 at~25.3fps (30requested),post-stream38.4C/throttled0x0. VGA snapshot subsequently verified as decodable640x480 RGB JPEG with recognizable content. Close framing/washed-out highlights limit detail assessment;Higher-output still subsequently verified104216bytes,2560x1440 RGB JPEG,fully decoded/viewed with readable lettering and washed-out highlights. Short1440p stream subsequently completed at~15.1fps with20requested,exit0,38.9C/throttled0x0. Native sensor resolution,long-run stability and current remain unverified.
 
 ## Usage
 - **Environment:** Indoor fixed installation; room size, lighting and humidity to be confirmed.
@@ -59,12 +63,12 @@ Updated 2026-11-05. Original brief came from the supplied product-specification 
 ## What is already owned
 - **Hardware-label check, 2026-11-04:** Pi4 ModelB visible in photo;4GB RAM user-confirmed. Adapter labelled Raspberry Pi KSA-15E-051300HU, INPUT100–240V AC50/60Hz0.5A, OUTPUT5.1V DC3.0A, two flat blades. Matches planned output rating; authenticity/load performance not established by photo. Actual HU plug supersedes earlier HE assumption; no round-to-flat adapter needed if it fits intended socket normally. Silvertec32GB microSDHC marked UHS-I/A1/Class10, reported empty; use for initial setup attempt. Real capacity/reliability/high-endurance construction unverified. Saved BOM/workbook amounts remain a purchase-plan reference pending reconciliation.
 - **Finishing consumables (2026-10-24):** User owns heat-shrink tubing, cable ties AND tie-mount bases; reuse, zero new purchase for those. Sizes/quantities not specified. Wire labels remain unconfirmed/unpriced.
-- **Tools:** User owns a3D printer and soldering equipment; models/consumables unconfirmed. Windows PC used for preparation; user also owns a Linux laptop, distribution/version pending. Monitor owned without a confirmed Pi-compatible cable; no Ethernet cable reported. Other tools remain unconfirmed.
+- **Tools:** User owns a3D printer and soldering equipment; models/consumables unconfirmed. Windows PC used for preparation; user also owns a Linux laptop running Mint22.3,identified2026-11-06. Monitor owned without a confirmed Pi-compatible cable; no Ethernet cable reported. Other tools remain unconfirmed.
 - **Parts:** Actual card now identified as Silvertec32GB microSDHC,UHS-I/A1/Class10;OS image written and setup files inspected. High-endurance rating/reliability not established. A02 SanDisk allowance remains an unreconciled purchase-plan reference,not an instruction to buy another card for this diagnostic.
 - **First Pi setup inventory, 2026-11-04:** Pi,supply,microSD and reader reported on hand;labels checked and results above supersede earlier pending-identification entries. This covers first-boot items,not all detector components. Original card was reported empty before OS writing.
 
 ## Status and constraints
-- Current phase: Phase2,Step19 initial Pi setup/log diagnosis. Approved2.4GHz trial applied and card safely returned;Pi last reported powered>=5minutes,green ACT off. No confirmed Pi IP,SSH login,completed OS boot or Wi-Fi association. Windows read-only boot inspection completed,but Linux logs were denied without elevation;bootfs Warning not repaired. User is considering Linux laptop for native ext4 access;next obtain distro/version with cat /etc/os-release and reconfirm physical state. No Linux laptop commands,Windows reader install,detector code or sensor wiring completed. See docs/CONTINUE_ON_ANOTHER_PC.md and docs/READ_STARTUP_LOGS_LINUX.md. Full BOM approval/remaining checks unresolved.
+- Current phase:Phase2,Step45 complete: user shut down through VNC and reports Pi power unplugged. Soldering deferred;Step42 ADS1115 header fit/soldering and all sensor electrical tests remain unfinished. Pi setup,authenticated SSH,basic camera and user-reported VNC access passed. Fan spinning was confirmed;exact power pins/rating unknown. See docs/CONTINUE_ON_ANOTHER_PC.md and the powered-off handoff before continuing.
 - **Project continuity, 2026-11-04:** Git repository connected to https://github.com/hanssantos02/cctv-smoke-detector. Read README.md and docs/CONTINUE_ON_ANOTHER_PC.md when moving to another PC. Track current documents, original PDFs and final Excel deliverable; local dependencies/scratch work stay excluded. Each PC needs GitHub authentication for pushes. This does not advance the hardware phase.
 - Physical detector performance, camera coverage, power draw, shutdown/restart behaviour and backup runtime remain untested.
 - Research prototype; keep independent certified smoke alarms.
@@ -101,3 +105,11 @@ Updated 2026-11-05. Original brief came from the supplied product-specification 
 - **B09 selected-pack follow-up, 2026-10-24:** Screenshot selects mixed10±2pcs, one pack at PHP98; budget provisionally98, writing surface/dimensions/fit pending. Other finishing materials remain owned. Priced final1155; known sum22019 plus B01 printingTBD. Next B10 camera mount depends on final camera; custom printing is an option, not yet a selected B10 substitution. No purchase or phase change.
 
 - **B12 procurement, 2026-10-24:** User assigns final panel push buttons to physical store: two non-illuminated, momentary normally-open, two-terminal panel switches with mounting nuts/hardware. One TEST, one SHUTDOWN; colour optional. Model, hole diameter, supported panel thickness, low-current contact suitability and actual shop quote pending. PHP25 each / PHP50 total estimate counted once; Physical Store rows74:81. B10/B11 remain pending; no Phase2 approval.
+
+## Installed case/fan update — 2026-11-06
+
+User reports Pi already installed in its case/box with fan connected and confirms fan spinning. Exact fan identity/rating and power pins remain unverified; check before allocating GPIO connections. Do not assume it is the separately selected A10 fan or a bundled fan. Short camera-test38.9C/throttled0x0 remains limited evidence of whole-system power/cooling.
+
+## Desktop access and stopping point — 2026-11-06
+
+User reports VNC desktop access working,then chose Shut Down and confirmed Pi unplugged. Header soldering remains deferred. Both sensor/converter boards are present;ADS1115 header remains loose as last observed. Use docs/handoffs/pi-prototype-powered-off.md for the current snapshot. No complete prototype or Phase3 approval.

@@ -1,106 +1,77 @@
 # Continue on another PC
 
-Updated **2026-11-05, Asia/Manila**. Repository: https://github.com/hanssantos02/cctv-smoke-detector
-Current phase: **Phase 2, Step 19 — initial Pi setup / Linux startup-log investigation**.
+## Current checkpoint — 2026-11-06, Asia/Manila
 
-## The next checkpoint
+**Phase2, Step45 complete. Pi power is unplugged per user after desktop shutdown.** The Pi is already in its case with a fan; microSD remains seated as last reported. Fan spinning was confirmed while powered. All-lights-off was not separately reported; do not invent that measurement. The user's latest request is to save all progress to `main` so a new chat can continue. Soldering is deferred, not completed.
 
-The user asked whether a Linux laptop would make diagnosis easier, then requested this repository checkpoint so another device/assistant can continue. The proposed Linux route has not yet been executed.
+Resume snapshot: [pi-prototype-powered-off.md](handoffs/pi-prototype-powered-off.md). The older [Linux-startup snapshot](handoffs/pi-startup-logs-linux.md) preserves November5 history and is superseded for current state.
 
-First obtain the laptop distribution/version:
+## Load these first
 
-```sh
-cat /etc/os-release
-```
-
-This only reads information; no installation, sudo or serial-group change is required. Return/inspect that output before choosing exact mount commands. Also reconfirm the actual Pi power/card location because hardware state can change between chats.
-
-Follow [READ_STARTUP_LOGS_LINUX.md](READ_STARTUP_LOGS_LINUX.md). The targets, if startup created them, are:
-
-- `/var/log/cloud-init.log`
-- `/var/log/cloud-init-output.log`
-- Persistent journals only if present and compatible with the laptop's journal tools; volatile `/run` logs cannot be assumed to survive shutdown.
-
-There is no need to install Codex, move the whole project, or install Pi development packages merely to use the Linux laptop as a card reader. If the user wants to continue this project/chat on it, clone/pull and read these files.
-
-## Hardware and software already identified
-
-| Item | Verified observation / limit |
+| File | What matters |
 | --- | --- |
-| Pi | Raspberry Pi 4 Model B visible in photo; 4GB RAM per user, not yet software-checked |
-| Supply | Label KSA-15E-051300HU, Raspberry Pi-branded, output 5.1V DC/3A, input 100–240V AC, flat pins; authenticity/load regulation untested |
-| Card | Silvertec 32GB microSDHC, UHS-I/A1/Class10 markings; no established high-endurance rating |
-| Reader | USB Mass Storage Device, reported 31,299,993,600 bytes; Windows disk/volume identifiers are local and must be rediscovered |
-| Case/display | Pi in black case; monitor owned, monitor input unconfirmed, no micro-HDMI cable or Ethernet cable reported |
-| OS preparation | Imager 2.0.12 on Windows; Raspberry Pi OS 64-bit desktop Trixie release 2026-10-06 was selected; running OS/version has not been confirmed |
-| Login settings | Hostname `sentrion-pi`, username `sentrion`; private password not stored in repo |
+| [AGENTS.md](../AGENTS.md) | Begin replies with phase/step; beginner explanations; phase gates; permission and physical-result rules |
+| [PROJECT.md](../PROJECT.md) | Sentrion SDS200 scope and dated material decisions |
+| [PROGRESS.md](../PROGRESS.md) | Latest state, completed entries87–121 and procurement backlog; dated pending statements are history |
+| [BUILD_PROTOTYPE.md](BUILD_PROTOTYPE.md), Step42 | Header dry-fit orientation and inspection checkpoint; not yet confirmed or soldered |
+| [WIRING.md](WIRING.md) | Delivered module labels, installed cables/fan uncertainty; no sensor-to-Pi pin assignment yet |
+| [TESTING.md](TESTING.md) | Passed checks and untested detector components |
+| [tools/README.md](../tools/README.md) | Historical card-helper scope; never rerun a card write to resume |
 
-**Last physical report:** prepared card seated in Pi, power on for at least five minutes during the 2.4GHz retry, green ACT subsequently off. No successful boot/SSH session is confirmed. Do not assume ACT off means failure or a safe shutdown.
+## Next hardware work, when the user is ready
 
-## What happened in this session
+Step41 photos are complete: MQ-family board has a fitted four-pin right-angle header, underside labels VCC/GND/DO/AO with the connector pointing right. Exact MQ-2 marking on the can is unreadable. The bagged converter board says ADS1115/16Bit I2C ADC+PGA; its straight header is loose. Labels run VDD/GND/SCL/SDA/ADDR/ALRT/A0/A1/A2/A3. Board markings do not prove chip identity or function.
 
-1. User authorized starting initial Pi setup, confirmed first-boot inventory, and supplied hardware labels. This supersedes the old Phase1-only status. Full BOM approval and later prototype success were not given.
-2. User operated Imager: Pi4, OS64-bit, Manila/Asia-Manila, US keyboard code `us`, account, Wi-Fi, SSH/password authentication; Connect was left off. Imager showed Write complete and automatic safe ejection. Verification was requested, but its completion was not separately established beyond the completion screen/brief reply.
-3. Pi powered; user reported red on and intermittent green activity. Neither `sentrion-pi.local` nor `sentrion-pi` resolved. Bounded IPv4 ping/SSH22 scans found other devices but no SSH listener. mDNS and manufacturer-prefix checks did not identify Pi; absence of a response is not proof of broken hardware.
-4. Router initially inaccessible, then user opened the PLDT/Huawei HG8145V5 interface. All four User Device Information pages and the pre-retry DHCP table showed no confirmed Pi identity. DHCP had spare addresses. An unnamed client refused SSH and was not identified as Pi. User supplied screenshots; direct Windows browser automation was blocked by its URL-policy enforcement, not bypassed.
-5. With explicit user approval, one power-off/card transfer allowed **read-only card inspection**. Boot files/configs were readable through bootfs's existing Windows volume path. Windows marked bootfs Warning; no repair was run. Unelevated raw access to the Linux partition was denied, so **Linux startup logs remain unread**.
-6. Card itself contained expected hostname/account/SSID/PH regulatory settings, SSH password auth and a service-start command. This is setup-file evidence, not running-state evidence. See [CARD_INSPECTION.md](CARD_INSPECTION.md). Do not falsely diagnose missing `enable_ssh`: this Imager version uses a service command.
-7. User approved a controlled **2.4GHz retry**, selected the network by connecting this Windows PC to it, and confirmed the password was the same. Only `network-config`'s AP name and matching NoCloud IDs in `meta-data`/`cmdline.txt` changed. `user-data` and password line remained unchanged; readbacks passed. Initial provisioning was requested again, not an image reflash.
-8. Originals were backed up **on the card** in `.sentrion-before-wifi24-b5e24c57`. It contains private configuration and must stay out of Git. Windows safe-ejection API succeeded when no menu appeared. User returned card and powered the retry for at least five minutes.
-9. PC verified on 2.4GHz/channel4; fresh hostname/SSH checks still failed. Post-retry router DHCP/WLAN association evidence has not been supplied. IPv6 discovery was unavailable because this Windows Wi-Fi binding is disabled; it was not enabled. IPv4 mDNS still gave no replies.
-10. Windows ext4-reader alternative was researched and its signed Free5.3 installer downloaded to ignored Windows `tmp/downloads/`, **never executed/installed**. User then asked about the Linux laptop; Windows installation is deferred.
+**Step42 is unfinished:** unwrap the ADC,inspect its underside and ten-hole/header fit,then dry-fit on an unpowered breadboard with long header ends down and board lettering/components up over short ends. Inspect top/side/underside and confirm available tools before teaching soldering. User owns soldering equipment;iron/solder/stand/multimeter readiness was requested but not confirmed. No joint or board voltage has been tested. Keep loose modules unpowered.
 
-The cause is **unconfirmed**. Do not declare the card faulty, 5GHz unsupported, an applied country-code error, or a completed Linux boot without evidence.
+Before allocating GPIO pins,identify the already connected fan's actual power pins/rating and case access. Do not infer all GPIO pins are unused or install/buy another fan. Never change wiring while powered. No MQ-2/ADS1115/LED/buzzer/button circuit or detector application exists. Phase3 is not authorized.
 
-## Permissions and next physical handling
+## Completed setup and how to reconnect later
 
-- User explicitly approved initial Pi setup and the completed 2.4GHz card edits. Those permissions are not blanket authorization for future flashes, installs, sudo, repairs or writes outside the project.
-- AGENTS.md requires asking before such commands and obtaining physical results one step at a time.
-- Keep the powered card in place until an agreed power-off. SSH clean shutdown is still unavailable; explain the risk of cutting power before another transfer.
-- Identify the actual Linux removable device and mount state before commands. Never assume `/dev/sdb`, reuse Windows disk2/E:, or open a guessed device.
-- Desktop automount may have already mounted the card; check before claiming strict read-only access.
-- For inspection, Linux ext4 `ro` alone can replay its journal; `ro,noload` avoids that write. Skipping recovery may expose an inconsistent view after power loss, so interpret errors/missing files cautiously. Exact commands follow the actual distro/device and applicable approval.
-- Capture logs privately and sanitize before displaying. Never commit raw cloud-init/network configuration, passwords, hashes or tokens. Do not run fsck, format or reflash as a speculative fix.
+- Pi4 ModelB Rev1.5,4GB consistent with3.7Gi usable RAM. Inspected Raspberry Pi-branded KSA-15E-051300HU supply5.1V/3A,flat pins;authenticity/full-load regulation unverified. Silvertec32GB microSDHC;endurance/real capacity unverified.
+- Linux Mint22.3 (Zena),Ubuntu noble base. Native read-only log inspection and new-router update completed. The card is now in the Pi,not a laptop mount. Historical `/dev/sda` names must be reidentified for any future card work.
+- New-router Wi-Fi works;user chose the laptop's current network. Hostname `sentrion-pi.local`,username `sentrion`,last IPv4 `192.168.100.211` (lease can change). Credentials were entered locally and are absent from Git. No fresh card rewrite is needed.
+- User SSH login succeeded. Later,after the user powers Pi normally and allows boot,use `ssh sentrion@sentrion-pi.local` from the laptop. Do not bypass a changed host key. The current unplugged Pi will not answer.
+- Running metadata: Debian13 Trixie,DEBIAN_VERSION_FULL13.7,kernel6.18.50+rpt-rpi-v8,aarch64. Asia/Manila clock synchronized,NTP active. Root21G free;boot417M free. Initial38.4C/throttled0x0.
+- Desktop access worked per user after enabling installed WayVNC and using TigerVNC on the laptop. Pi observed versions:wayvnc0.10.2-1+rpt1,raspi-config20261026. Read-only checkpoint audit confirms laptop tigervnc-viewer1.13.1+dfsg-2build2 installed (both FLTK libraries1.3.8-6.1build2). Launch `vncviewer sentrion-pi.local` on the laptop after a later boot. Pi credentials are entered privately;no new account/autologin/router forwarding was required by the guide. See [REMOTE_DESKTOP_LINUX.md](REMOTE_DESKTOP_LINUX.md).
+- Shutdown through the Pi desktop caused TigerVNC connection reset104;consistent with service shutdown. User subsequently confirmed unplugging. Closing a viewer alone is not shutdown. No hardware action is needed for this Git checkpoint.
 
-## Files to read
+## Camera evidence and limits
 
-1. [AGENTS.md](../AGENTS.md): active permissions, phase gates, beginner explanations.
-2. [PROJECT.md](../PROJECT.md): product scope, inventory and sourcing decisions.
-3. [PROGRESS.md](../PROGRESS.md): current checkpoint plus completed history; later explicit decisions supersede older dated entries.
-4. [READ_STARTUP_LOGS_LINUX.md](READ_STARTUP_LOGS_LINUX.md): immediate diagnostic path.
-5. [CARD_INSPECTION.md](CARD_INSPECTION.md), [TESTING.md](TESTING.md): evidence/limits rather than assumptions.
-6. [BUILD_PROTOTYPE.md](BUILD_PROTOTYPE.md): complete saved instructions/history; early steps are already completed, not current tasks.
-7. [Immutable session snapshot](handoffs/pi-startup-logs-linux.md): compact session handoff.
-8. [tools/README.md](../tools/README.md): Windows-only helper limits; do not run them on Linux or automatically rerun card changes.
+[CAMERA_CHECK.md](CAMERA_CHECK.md) holds exact commands,advertised format table and per-step findings. Delivered enclosed generic webcam has USB-A/clip and2K front marking,USB349c:3307 Generic HD video,uvcvideo,v4l2-ctl1.30.1. Video0 captures images;video1 is metadata.
 
-There is no smoke-detector application, tested sensor wiring, confirmed prototype, final assembly or validated detection performance. Phase3 remains gated on prototype success.
+| Verified test | Result |
+| --- | --- |
+| VGA MJPG stream | 640×480,30fps requested,~25.3fps reported,exit0,38.4C/throttled0x0 |
+| VGA image | JPEG640×480 RGB,full decode/view PASS |
+| Higher image | JPEG2560×1440 RGB,104216bytes,full decode/view PASS;recognizable scene/readable box lettering,some washed-out highlights |
+| Short higher-mode stream | 2560×1440 MJPG,20fps requested,~15.1fps reported,exit0,38.9C/throttled0x0 |
 
-## Procurement and workbook continuity
+Last requested camera mode before shutdown was1440p MJPG20fps;runtime settings are not assumed to survive power loss. Do not claim20/30fps was achieved,native sensor resolution,measured USB draw,controlled image quality or long-run reliability. No smoke-detection performance has been validated. Avoid unchanged snapshot loops or buying a duplicate camera from old BOM allowances.
 
-The current workbook is `outputs/bom-review-2026-10-22-f01c1aae/Sentrion_SDS200_BOM.xlsx` (BOM Summary, Review Notes, Physical Store; 41 recorded store hyperlinks). It is unchanged in this session. Do not regenerate it from the archived builder.
+Images were local ignored `tmp/camera-test.jpg` and `tmp/camera-1440p.jpg`;they do not transfer through Git. Their verified findings are saved. Request a new image only if the next task needs visual evidence.
 
-Saved purchase-plan reference: TableA PHP20,864; priced TableB PHP1,155; known sum PHP22,019 plus B01 printing TBD. These are not actual spending/remaining-to-buy totals. Reconcile A02 ownership/possible endurance replacement and obsolete A12 PHP39 plug allowance together in Markdown/workbook later. No round-to-flat adapter is needed for the actual HU flat-pin supply if it fits normally.
+## Offline investigation: completed history
 
-Preserve camera uncertainty, MQ-2/ADS1115+divider design, untested fan/heatsink contents/current, external UPS requirement, owned finishing materials, printed-enclosure cost TBD, B03/B04/B08 sizing, B06 reuse and B10/B11 sourcing. See [BOM.md](BOM.md)/[BOM_REVIEW.md](BOM_REVIEW.md) instead of repeating the whole sourcing discussion.
+[READ_STARTUP_LOGS_LINUX.md](READ_STARTUP_LOGS_LINUX.md) records the desktop's prior rw automount,subsequent ro/noload mount and cloud-init findings. Two setup runs completed;latest zero fatal errors with missing cc_netplan_nm_patch warning. Early Wi-Fi down/no-IP snapshots did not reveal later failure cause;no persistent journal was available. Saved wireless switch was true,profile/password existed and NetworkManager renderer was supplied by system defaults. Original router failure remains undiagnosed;do not revive radio-disabled,5GHz-incompatible or failed-boot conclusions without evidence.
 
-## Git transfer
+[CHANGE_WIFI_LINUX.md](CHANGE_WIFI_LINUX.md) records the completed installed-profile update,backup/readback,read-only restoration,safe card return and live login. `change_pi_wifi.py` defaults to preview and requires local hidden password entry and YES for writes. It is scoped to that inspected reader/card,not general-purpose provisioning. Boot seed/account/SSH/instance IDs were unchanged;explicit future reprovisioning can regenerate old seed settings. Never rerun to resume. Private backups stay on card,out of Git. Historical Windows helpers are Windows-only;Windows Linux Reader was never installed.
 
-First clone:
+## Scope, budget and permissions
 
-```sh
-git clone https://github.com/hanssantos02/cctv-smoke-detector.git
-cd cctv-smoke-detector
-git status
-git log -3 --oneline
-```
+The prototype scope remains camera+MQ-2/ADS1115/divider,local alarms,Wi-Fi logging/snapshots and external packaged UPS. Initial Pi setup was explicitly authorized;full BOM approval,complete prototype success and Phase3 were not given. User selected desktop setup and then chose to stop hardware work for now. Do not infer authorization to solder,flash,install,run sudo or rewire merely from this handoff. Apply current user instructions and inspect real state before a new action.
 
-Existing checkout:
+[The workbook](../outputs/bom-review-2026-10-22-f01c1aae/Sentrion_SDS200_BOM.xlsx) is authoritative and unchanged. Never regenerate it from archived builder scripts. Reference budget:TableA PHP20,864;priced TableB PHP1,155;known sum PHP22,019 plus enclosure printing TBD. These are historical purchase-plan totals,not reconciled actual spending. A02 card ownership/endurance,A12 obsolete PHP39 plug allowance,and actual camera/fan receipt costs need coordinated later Markdown/workbook reconciliation. No duplicate card,adapter,fan or module purchase is requested. Other procurement limits are in PROGRESS.md/BOM.md.
+
+## Git transfer and privacy
+
+For an existing checkout:
 
 ```sh
 git status
 git pull --ff-only origin main
 ```
 
-Preserve local changes and ask for help on conflict/divergence. Do not use reset --hard or force push. Each computer needs its own authorized GitHub access for pushes; credentials/private keys are not transferred by this repo. Existing Windows absolute paths and installed tools do not transfer.
+Preserve local edits;never reset or force-push to solve divergence. Fresh checkout instructions are in README.md. Use the containing commit and `origin/main` for checkpoint identity/publication;no credentials/private keys transfer with Git. The user explicitly requested this checkpoint on main.
 
-Only source/docs, original PDFs and the current workbook belong in the checkpoint. Installers, dependency trees, local screenshots/attachments, private card backups and raw logs are ignored. Chat and actual hardware state are not recreated by Git; relevant outcomes are preserved here. Use Git history for the checkpoint commit identity.
+Raw attachments/photos/logs,temporary renders,dependencies and private on-card setup backups are ignored. Sanitized findings,source helpers and guides belong in Git;the original PDFs/workbook remain unchanged. Machine-local absolute image/output paths are not portable. A new chat gets continuity from these files rather than access to the old chat or hardware.

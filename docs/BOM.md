@@ -624,3 +624,28 @@ User will buy two panel-mount push buttons in a physical store. Ask for non-illu
 Check actual mounting-hole diameter, supported panel thickness and suitability for low-current signal contacts before enclosure design. No exact diameter or switch model has been selected. Physical Store rows74:81 list separate TEST/SHUTDOWN quantities of one each; F80 links to existing B12 subtotal J40. PHP25 each / PHP50 total remains an estimate, not a verified shop quote. Update I40 with actual unit price when obtained; G40 stays2. No duplicate expense or purchase claimed.
 
 Prototype PHP20,864; priced final additions PHP1,155; known sum PHP22,019 plus B01 printing TBD. Existing 41 online hyperlinks and unrelated worksheet cells/formulas/validation/panes remain preserved. B10/B11 and other recorded verification questions remain pending; reaching the final row does not approve Phase2.
+
+
+## Delivered camera visual check — 2026-11-06
+
+User confirms camera available and supplies photo showing an enclosed black webcam with clip,molded USB-A plug,and front text WEBCAM/2K QUAD HD. No exact manufacturer/model or electrical rating is visible. This does not prove native2K resolution,UVC compatibility,FPS,current draw,or identity as either earlier store listing. Proceed with individual USB detection/capture testing in [CAMERA_CHECK.md](CAMERA_CHECK.md);port connection is in [WIRING.md](WIRING.md). No replacement purchase is requested. Receipt price is unknown;A03 reference allowance,all totals and the existing workbook are unchanged pending coordinated reconciliation. B10 mount must suit the delivered enclosed webcam/clip if accepted;do not assume Waveshare board mounting holes.
+
+2026-11-06 follow-up:USB connection user-confirmed after black-Pi-USB2 instruction. Linux identification/driver/video modes and current remain pending;no price/workbook/budget change.
+
+2026-11-06 enumeration:actual camera reports USB349c:3307 Generic HD video;Linux uvcvideo driver bound and camera video nodes created. UVC enumeration works. Advertised formats/native sensor resolution,image streaming and actual current still pending;budget/workbook unchanged.
+
+2026-11-06 capability query:video0 is image capture,video1 metadata. Existing v4l2-ctl1.30.1 reports MJPG output up to2560x1440 at30/20fps. This establishes advertised modes,not native sensor resolution,achieved streaming rate or image quality. Next modest stream test;no A03 price/workbook change.
+
+2026-11-06 initial stream:640x480 MJPG with30fps requested completed exit0,reported~25.3fps. Pi flags0x0/temp38.4C afterward. Basic transport works;no decoded image/native sensor/high-resolution/actual-current result yet. Budget/workbook unchanged.
+
+2026-11-06 snapshot:one640x480 RGB JPEG transferred/decoded/viewed successfully. Basic UVC/VGA capture works;controlled high-resolution image quality,coverage,native sensor resolution and actual power draw remain pending. Existing webcam is being tested;no duplicate camera purchase or budget/workbook change.
+
+2026-11-06 higher-output still:actual2560x1440 RGB JPEG transferred,fully decoded and viewed successfully;box lettering readable,some highlights washed out. This confirms1440p output,not native sensor resolution or sustained high-resolution FPS. Higher-mode streaming/power tests pending;no price/workbook/budget change.
+
+## Existing case/fan reported — 2026-11-06
+
+User reports Pi already installed in its case/box with a connected fan and now confirms it is spinning. Exact fan identity, bundled/separate purchase, voltage/current and power pins remain unverified. Do not request a duplicate fan. A10/A19 receipt-cost/workbook reconciliation awaits evidence; no prices or workbook values changed. Short camera stream result~15.1fps (20requested),exit0,throttled0x0,38.9C applies to this reported assembly.
+
+## Delivered sensor/ADC visual inspection — 2026-11-06
+
+Photos show both modules physically present. MQ-family Flying-Fish/MQ Sensor board has fitted four-pin header (VCC/GND/DO/AO); exact MQ-2 can marking is unreadable. Bagged board is printed ADS1115/16Bit I2C ADC+PGA and includes a separate straight header; soldering is needed before reliable jumper connections. No duplicate module/header purchase requested. Actual chip function, rating/voltage tests, tools readiness and receipt costs remain unverified; prices/workbook unchanged.
